@@ -1,0 +1,167 @@
+body {
+    font-family: 'Playpen Sans', cursive;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #F5F19A, #F5E8A5, #EFF5AB);
+    background-size: 400% 400%;
+    animation: gradientBG 5s infinite;
+    overflow-x: hidden;
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0 !important;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: transparent;
+    text-align: center;
+}
+
+.card, .remove-item-button::before {
+    width: 50%;
+}
+
+.card, #cart-items {
+    padding: 20px;
+}
+
+.card, #cart-items {
+    border-radius: 10px;
+}
+
+h1, h4, p, #close-button, #cart-total {
+    color: #333;
+}
+
+p {
+    margin: 10px;
+}
+
+#close-button {
+    top: 0;
+    right: 10px;
+    font-size: 24px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+#close-button, .remove-item-button::before {
+    position: absolute;
+}
+
+#close-button, .remove-item-button, #clear-cart-button {
+    cursor: pointer;
+}
+
+#cart-items {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease;
+}
+
+#cart-items, #cart-total {
+    margin: 10px;
+}
+
+.remove-item-button {
+    border: none;
+    background: none;
+    color: #980E00;
+    position: relative;
+    transition: transform 0.3s ease;
+    user-select: none;
+}
+
+.remove-item-button::before {
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 5px;
+    margin: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.remove-item-button:hover {
+    color: #FF0B00;
+}
+
+#cart-total {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btn {
+    position: relative;
+    width: 30%;
+}
+
+@keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+@media (max-width: 720px) {
+    .card {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .back-link {
+        margin-bottom: 10px;
+    }
+
+    .remove-item-button {
+        color: #FF0B00;
+    }
+
+    #clear-cart-button {
+        transition: none;
+    }
+
+    #clear-cart-button, #clear-cart-button:hover {
+        border: none;
+    }
+
+    #close-button {
+        right: 10px;
+    }
+
+    .btn-success, .btn-danger {
+        width: 50%;
+        margin: 5px;
+    }
+}

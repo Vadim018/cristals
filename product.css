@@ -1,0 +1,372 @@
+body {
+    font-family: 'Playpen Sans', cursive;  
+    margin: 0;
+    padding: 0;
+    background: #FFF6C1;
+    overflow-x: hidden;
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0 !important;
+}
+
+body, 
+.new-icon, 
+.dark-background h1, 
+.dark-background p, 
+.dark-background 
+.quantity-button,
+.dark-background 
+.quantity-input, 
+.dark-background 
+#cart-item-count, 
+.dark-background 
+.radio,
+.add-to-cart-button,
+#clock {
+  color: #fff;
+}
+
+header {
+    height: 150px;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 3;
+}
+
+header, .dark-background {
+    background-color: #333;
+}
+
+header,
+section,
+.new-icon,
+.product-image img,
+.product-content,
+.quantity-control,
+.quantity-button,
+.add-to-cart-container,
+.add-to-cart-button,
+#product-details {
+    display: flex;
+}
+
+#pizza-logo,
+#drinks-logo,
+#snacks-logo,
+#soups-logo,
+#salads-logo,
+#desserts-logo,
+#milkshake-logo,
+#icecream-logo,
+#wine-logo,
+#sushi-logo,
+#steak-logo,
+.hide-lightbulb-button {
+  display: none;
+}
+
+#pizza-logo,
+#drinks-logo,
+#snacks-logo,
+#soups-logo,
+#salads-logo,
+#desserts-logo,
+#milkshake-logo,
+#icecream-logo,
+#wine-logo,
+#sushi-logo, 
+#steak-logo {
+  opacity: 1;
+}
+
+.quantity-input {
+  width: 100px;
+}
+
+.new-icon {
+    background-color: #CAAC00;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    right: 5px;
+}
+  
+.new-icon, .lightbulb-container, .dark-background , #cart-icon, #cart-item-count {
+    position: absolute;
+}
+
+.new-icon, .lightbulb-container.show-lightbulb, .dark-background {
+    top: 0;
+}
+
+.new-icon, .product-title, .quantity-button, .quantity-input {
+    font-size: 18px;
+}
+
+.new-icon, h1, p, #clock, .container, .product-price, .quantity-input {
+    text-align: center;
+}
+
+.new-icon, header, .product-card, .product-price, .quantity-control, .quantity-button {
+    display: flex;
+}
+
+.new-icon, section, .product-price, .quantity-control, .quantity-button, .product-image img {
+    justify-content: center;
+}
+
+.new-icon, header, section, .quantity-control, .quantity-button, .product-image img, .add-to-cart-container {
+    align-items: center;
+}
+
+.new-icon, .lightbulb-container, .quantity-button, .add-to-cart-button {
+    cursor: pointer;
+}
+
+.new-icon, .modal, .modal-content, .close {
+    z-index: 999;
+}
+
+.lightbulb-container {
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.3s ease, top 0.3s ease;
+    z-index: 2;
+}
+
+.lightbulb {
+    transition: transform 0.3s ease;
+}
+
+.lightbulb img {
+    width: 70px;
+}
+
+.lightbulb:hover {
+    transform: translateY(-10px);
+}
+
+.lightbulb-container:not(.show-lightbulb) .hide-lightbulb-button {
+    display: block;
+}
+
+.dark-background {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.dark-background header {
+    background-color: #222;
+}
+
+.dark-background hr {
+    border: 1px solid #fff;
+}
+
+#clock {
+    font-size: 36px;
+    font-weight: bold;
+    user-select: none;
+    cursor: default;
+}
+
+section {
+    height: 100vh;
+}
+
+#product-details {
+    flex-direction: row;
+    margin-top: 100px;
+}
+
+h1, p {
+    font-size: 52px;
+}
+
+h1, p, .quantity-button, .quantity-input {
+    color: #333;
+}
+
+p {
+    text-align: left;
+}
+
+p, .product-info p, .quantity-button, .quantity-input, .add-to-cart-button {
+    font-size: 24px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #000;
+    margin: 20px;
+}
+
+#product-price {
+    color: #FF3C00;
+}
+
+.product-image img {
+    width: 70%;
+    cursor: pointer;
+}
+
+.product-image img, .product-content {
+    margin: auto;
+}
+
+.product-image img, .quantity-button, .quantity-input, .add-to-cart-button {
+    border-radius: 5px;
+}
+
+.product-content {
+    flex: 1;
+    flex-direction: column;
+}
+
+.product-info {
+    margin-bottom: 20px;
+}
+
+.quantity-button {
+    border: 1px solid #FF3C00;
+    margin: 0 10px;
+}
+
+.quantity-button, .quantity-input {
+    background: none;
+    height: auto;
+}
+
+.quantity-button, .home-png-button img {
+    width: 50px;
+}
+
+.quantity-input {
+    border: 1px solid #FF3C00;
+}
+
+.quantity-button:focus, .quantity-input:focus, .add-to-cart-button:focus {
+    outline: none;
+}
+
+.add-to-cart-container {
+    justify-content: space-around;
+}
+
+.add-to-cart-button {
+    background-color: #FF0000;
+    border: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    margin: 20px auto;
+}
+
+.add-to-cart-button:hover {
+    background-color: #9C0000;
+}
+
+.home-png-button img {
+    margin: 15px;
+    filter: invert(100%);
+}
+
+@media (max-width: 720px) {
+    header {
+        margin-bottom: 70px;
+    }
+
+    .lightbulb {
+        display: none;
+    }
+
+    .product-image, .product-content {
+        display: flex;
+    }
+
+    .navbar-brand, .product-info p, #product-price, .quantity-button, .quantity-input, .add-to-cart-button {
+        font-size: 18px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 14px;
+    }
+
+    #clock {
+        display: none;
+    }
+
+    section {
+        margin: 20px;
+    }
+
+    #product-details {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h1, .product-info p {
+        text-align: center;
+    }
+
+    hr, .quantity-input {
+        margin: 10px 0;
+    }
+
+    .product-image, .product-content {
+        justify-content: center;
+        margin: auto;
+    }
+
+    .product-image img {
+        width: 100%;
+    }
+
+    .quantity-control {
+        flex-direction: row;
+    }
+
+    .quantity-button {
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+    }
+
+    .quantity-input {
+        width: 70px;
+    }
+
+    .add-to-cart-container {
+        margin: 10px auto;
+    }
+
+    .add-to-cart-button:hover {
+        background-color: #FF0000;
+    }
+
+    .home-png-button img {
+        margin: 0;
+        filter: invert(100%);
+    }
+}

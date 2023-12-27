@@ -1,0 +1,124 @@
+body {
+    font-family: 'Playpen Sans', cursive;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background: url('https://cdn.pixabay.com/photo/2015/12/26/21/20/forest-1109180_1280.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.block1 {
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 10px inset #8D8D8D;
+    background-color: rgba(234, 255, 255, 0.7);
+}
+
+.block {
+    border: 10px inset #8D8D8D;
+    margin: 50px;
+    background-color: rgba(234, 255, 255, 0.7);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+}
+
+.home img {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    z-index: 1;
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0 !important;
+}
+
+h1 {
+    color: #000;
+    font-size: 36px;
+    font-weight: normal;
+    text-align: center;
+    margin: 20px auto;
+}
+
+ol {
+    margin: 20px;
+    color: #000;
+}
+
+li,
+label {
+    font-size: 18px;
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}
+
+p {
+    font-weight: bold;
+    font-size: 24px;
+    color: #000;
+    text-align: left;
+    margin: 10px;
+}
+
+@media screen and (max-width: 720px) {
+    .home img {
+        top: 20px;
+        left: 20px;
+        width: 50px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .block {
+        margin: 20px 5px;
+    }
+
+    .block1 {
+        margin-top: 100px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}

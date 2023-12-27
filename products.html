@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title id="categoryInfo"></title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="stylesheet" href="products.css">
+</head>
+    <div id="loading-screen"></div>
+<body>
+<header>
+    <div class="logo" id="pizza-logo">
+        <a href="index.html">
+            <img src="img/pizza-lg.png" >
+        </a>
+    </div>
+    <div class="logo" id="drinks-logo">
+        <a href="index.html">
+            <img src="img/drinks-lg.png" >
+        </a>
+    </div>
+    <div class="logo" id="snacks-logo">
+        <a href="index.html">
+            <img src="img/snacks-lg.png" >
+        </a>
+    </div>
+    <div class="logo" id="soups-logo">
+        <a href="index.html">
+            <img src="img/soups-lg.png" >
+        </a>
+    </div>
+    <div class="logo" id="salads-logo">
+        <a href="index.html">
+            <img src="img/salads-lg.png" >
+        </a>
+    </div>
+    <div class="logo" id="desserts-logo">
+        <a href="index.html">
+            <img src="img/desserts-lg.png" >
+        </a>
+    </div>
+    <div class="logo" id="milkshake-logo">
+        <a href="index.html">
+            <img src="img/milkshake-lg.png" >
+        </a>
+    </div>
+    <div class="logo" id="icecream-logo">
+        <a href="index.html">
+            <img src="img/icecream-lg.png" >
+        </a>
+    </div>
+    <div class="logo" id="wine-logo">
+        <a href="index.html">
+            <img src="img/wine-lg.png" >
+        </a>
+    </div>
+    <div class="logo" id="burgers-logo">
+        <a href="index.html">
+            <img src="img/burgers-lg.png" >
+        </a>
+    </div>
+    <div class="logo" id="sushi-logo">
+        <a href="index.html">
+            <img src="img/sushi-lg.png" >
+        </a>
+    </div>
+    <div class="logo" id="steak-logo">
+        <a href="index.html">
+            <img src="img/steak-lg.png" >
+        </a>
+    </div>
+    <div class="lightbulb-container" id="lightbulb-container">
+        <audio id="light-switch-sound">
+            <source src="switch.mp3" type="audio/mpeg">
+        </audio>
+        <div class="lightbulb" id="lightbulb">
+            <img src="img/light-on.png" id="lightbulb-image">
+        </div>
+    </div>
+    <div class="clock">
+        <div id="clock"></div>
+    </div>
+</header>
+<div id="emptyCategoryMessage"></div>
+<div class="container" id="productContainer">
+    <div class="row justify-content-center" id="productRow"></div>
+</div>
+<div id="cart-icon">
+    <a href="cart.html">
+        <img src="https://cdn-icons-png.flaticon.com/128/8878/8878823.png">
+        <span id="cart-item-count"></span>
+    </a>
+</div>
+<button id="backToTopBtn" onclick="backToTop()">
+    <img src="img/arrow.png">
+</button>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="products.js"></script>
+</body>
+</html>

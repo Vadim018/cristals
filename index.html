@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pearl Restaurant</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+    <div id="loading-screen"></div>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="navbar-brand text-center">
+            <div class="lightbulb-container" id="lightbulb-container">
+                <audio id="light-switch-sound">
+                    <source src="switch.mp3" type="audio/mpeg">
+                </audio>
+                <div class="lightbulb light-switch" id="lightbulb">
+                    <img src="img/light-on2.png" id="lightbulb-image">
+                </div>
+            </div>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mobileMenu">
+            <ul class="navbar-nav ml-auto">
+                <li>
+                    <a class="btn-group-menu" href="info.html">
+                        Info
+                    </a>    
+                </li>
+                <li>
+                    <a class="btn-group-menu" href="about.html">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a class="btn-group-menu" href="terms.html">
+                        Terms
+                    </a>
+                </li>
+                <li>
+                    <a class="btn-group-menu" href="login.html">
+                        Login
+                    </a>
+                </li>
+            </ul>
+        </div>            
+    </nav>
+</header>
+<div class="menu-container">
+    <h2 id="menuTitle"></h2>
+</div>
+<div class="button-container">
+    <div class="category">
+        <a href="products.html" data-category="Burgers">
+            <img src="img/burgers.jpg">
+            <div class="category-name">Burgers</div>
+        </a>
+    </div>
+    <div class="category">
+        <a href="products.html" data-category="Sushi">
+            <img src="img/sushi.jpg">
+            <div class="category-name">Sushi</div>
+        </a>
+    </div>
+    <div class="category">
+        <a href="products.html" data-category="Pizza">
+            <img src="img/pizza.jpg">
+            <div class="category-name">Pizza</div>
+        </a>
+    </div>
+    <div class="category">
+        <a href="products.html" data-category="Snacks">
+            <img src="img/snacks.jpg">
+            <div class="category-name">Snacks</div>
+        </a>
+    </div>
+    <div class="category">
+        <a href="products.html" data-category="Soups">
+            <img src="img/soups.jpg">
+            <div class="category-name">Soups</div>
+        </a>
+    </div>
+    <div class="category">
+        <a href="products.html" data-category="Salads">
+            <img src="img/salads.jpg">
+            <div class="category-name">Salads</div>
+        </a>
+    </div>
+    <div class="category">
+        <a href="products.html" data-category="Steaks">
+            <img src="img/steaks.jpg">
+            <div class="category-name">Steaks</div>
+        </a>
+    </div>
+    <div class="category">
+        <a href="products.html" data-category="Wine">
+            <img src="img/wine.jpg">
+            <div class="category-name">Wine</div>
+        </a>
+    </div>
+    <div class="category">
+        <a href="products.html" data-category="Desserts">
+            <img src="img/desserts.jpg">
+            <div class="category-name">Desserts</div>
+        </a>
+    </div>
+    <div class="category">
+        <a href="products.html" data-category="Ice">
+            <img src="img/ice.jpg">
+            <div class="category-name">Ice</div>
+        </a>
+    </div>
+    <div class="category">
+        <a href="products.html" data-category="Drinks">
+            <img src="img/drinks.jpg">
+            <div class="category-name">Drinks</div>
+        </a>
+    </div>
+    <div class="category">
+        <a href="products.html" data-category="Milkshakes">
+            <img src="img/milkshakes.jpg">
+            <div class="category-name">Milkshakes</div>
+        </a>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="social-links">
+            <a href="https://www.youtube.com/" target="_blank" title="YouTube">
+                <img src="img/youtube.png">
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+                <img src="img/facebook.png">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+                <img src="img/instagram.png">
+            </a>
+        </div>
+        <div class="contact-info">
+            <a href="tel:+0672322321">
+                <p>067 232 23 21</p>
+            </a>
+            <a href="tel:+0983435435">
+                <p>098 343 54 35</p>
+            </a>
+            <p>Kyiv, Street 30</p>  
+        </div>
+    </div>
+</footer>
+<div class="copy-right">
+    <p>&copy; 2021-2023 Restaurant</p>
+</div>
+<button id="backToTopBtn" onclick="backToTop()">
+    <img src="img/arrow.png">
+</button>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

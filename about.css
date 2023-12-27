@@ -1,0 +1,349 @@
+body {
+    font-family: 'Playpen Sans', cursive;
+    background: linear-gradient(to right, #76D6FF, #2AC5FD);
+    background-size: 400% 400%;
+    animation: gradientBG 5s infinite;
+    overflow-x: hidden;
+}
+
+#loading-screen {
+    background-color: #fff;
+    z-index: 99999;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#loading-screen, #backToTopBtn {
+    position: fixed;
+}
+
+#loading-screen, .dark-background {
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.fade-out {
+    opacity: 0 !important;
+}
+
+body, .dark-background .card-text, .dark-background h2, .footer, .contact-info p, #backToTopBtn {
+    color: #fff;
+}
+
+body, .copy-right p {
+    margin: 0;
+}
+
+body, #backToTopBtn {
+    padding: 0;
+}
+
+h2 {
+    font-size: 72px;
+    color: #333;
+}
+
+h2, .footer, .contact-info p, .copy-right {
+    text-align: center;
+}
+
+h2, .card-text {
+    margin: 20px;
+}
+
+header {
+    background-color: #333;
+    height: 300px;
+}
+
+.navbar, .card-text {
+    padding: 10px;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.lightbulb img {
+    top: 20px;
+    right: 20px;
+    width: 100px;
+}
+
+.lightbulb-img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.dark-background .lightbulb-img {
+    transform: rotate(180deg);
+}
+
+.dark-background {
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+
+.lightbulb img, .dark-background {
+    position: absolute;
+}
+
+.lightbulb img, #backToTopBtn {
+    cursor: pointer;
+}
+
+.buttons {
+    justify-content: start;
+    margin: 200px 0 0 30px;
+    gap: 50px;
+}
+
+.buttons, .restaurant-card, .footer-content, .social-links, .contact-info, .copy-right, #loading-screen {
+    display: flex;
+}
+
+.buttons, .restaurant-card, .footer-content, .contact-info, .copy-right, #loading-screen {
+    align-items: center;
+}
+
+.buttons a {
+    background: #95F3FF;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: color 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.buttons a, .social-links a, .contact-info a {
+    text-decoration: none;
+}
+
+.buttons a, #backToTopBtn {
+    color: transparent;
+}
+
+.buttons a, .footer, .copy-right {
+    padding: 20px;
+}
+
+.buttons a:hover {
+    color: #00AAFF;
+    border-bottom-color: #00AAFF;
+}
+
+.restaurant-card {
+    flex-direction: row;
+    justify-content: space-between;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 0.5s ease;
+}
+
+.restaurant-card.active, .active, #loading-screen {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-text {
+    color: #333;
+    border: 5px solid #333;
+}
+
+.card-image-left, .card-image-right {
+    width: 30%;
+}
+
+.card-text, .card-image-left, .card-image-right {
+    flex: 1;
+    border-radius: 10px;
+}
+
+.card-text, .contact-info p, .copy-right, .buttons a {
+    font-size: 24px;
+}
+
+.card-image-left, .card-image-right, .social-links, .social-links a {
+    margin: 10px;
+}
+
+.card-image-left {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-image-right {
+    transition: transform 0.3s ease-in-out;
+}
+
+.lifted {
+    transform: translateY(-20px);
+}
+
+.footer {
+    background: #222;
+    box-shadow: rgba(0, 0, 0, 0.5);
+}
+
+.footer-content {
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex-direction: column;
+}
+
+.social-links {
+    flex-direction: row;
+}
+
+.social-links a {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+.social-links a:hover {
+    filter: none;
+}
+
+.social-links img {
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}
+
+.social-links img {
+    width: 50px;
+}
+
+.contact-info, .copy-right, #loading-screen {
+    justify-content: center;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.copy-right {
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #222, #444);
+}
+
+.copy-right, .dark-background, #loading-screen {
+    width: 100%;
+}
+
+#backToTopBtn {
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+}
+
+#backToTopBtn img {
+    width: 70px;
+    filter: invert(100%);
+}
+
+#backToTopBtn:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 255);
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media (max-width: 720px) {
+    header {
+        height: 350px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .buttons {
+        margin: 0;
+    }
+
+    .buttons a {
+        border: none;
+    }
+
+    .buttons, .buttons a, .lightbulb-container {
+        display: block;
+    }
+
+    .buttons a:hover {
+        color: transparent;
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .lightbulb img {
+        width: 70px;
+    }
+
+    .restaurant-card {
+        flex-direction: column;
+    }
+
+    .restaurant-card {
+        justify-content: center;
+    }
+
+    .restaurant-card img {
+        padding: 5px;
+        margin: auto;
+    }
+
+    .restaurant-card, .restaurant-card img {
+        width: 100%;
+    }
+
+    .card-text, .buttons a, .contact-info p, .copy-right {
+        font-size: 18px;
+    }
+
+    .social-links a {
+        filter: none;
+        transition: none;
+    }
+    
+    .social-links a:hover {
+        transform: none;
+    }
+    
+    .social-links img {
+        width: 40px;
+    }
+
+    #backToTopBtn img {
+        width: 50px;
+    }
+
+    #backToTopBtn {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+
+    #backToTopBtn:hover {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+
+    .lifted {
+        transform: translateY(0);
+    }
+}
