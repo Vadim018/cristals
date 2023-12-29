@@ -20,11 +20,19 @@ video {
 }
 
 .home img {
+    filter: invert(100%);
+    width: 50px;
+}
+
+.home {
     position: absolute;
     top: 20px;
     left: 20px;
-    width: 50px;
     z-index: 1;
+    background-color: transparent;
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    padding: 5px;
 }
 
 #loading-screen {
@@ -55,15 +63,30 @@ video {
     align-items: center;
     margin: auto;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+
+    transition: transform 0.5s ease-in-out;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
 }
 
 .login-container {
+    background-color: transparent;
+    backdrop-filter: blur(50px);
     width: 450px;
     margin: 50px auto;
     padding: 20px;
+
+    border-top: 5px solid #007BFF;
+    border-left: 5px solid #007BFF;
+
+    border-bottom: 5px solid #e1ff00;
+    border-right: 5px solid #e1ff00;
+
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
-    background-color: #fff;
+    
 }
 
 .form-group {
@@ -74,7 +97,7 @@ video {
     display: block;
     text-align: center;
     margin-bottom: 10px;
-    color: #333;
+    color: #fff;
     font-weight: bold;
 }
 
@@ -92,7 +115,7 @@ input:focus {
 
 .form-group input {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-sizing: border-box;
@@ -103,16 +126,9 @@ input:focus {
     border-color: #007BFF;
 }
 
-.remember-me {
-    display: flex;
-    text-align: left;
-    margin: 10px auto;
-    color: #555;
-}
-
 .or {
     text-align: center;
-    color: #555;
+    color: #ccc;
 }
 
 .login-button {
@@ -132,21 +148,21 @@ input:focus {
     text-decoration: none;
     cursor: pointer;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s ease;
+}
+
+.login-button a:hover {
+    background-color: #0050a6;
 }
 
 .register-link a {
     color: #007BFF;
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 20px 0 0 0;
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
+    margin-top: 20px;
+    border: none;
     text-decoration: none;
     cursor: pointer;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes gradientBG {
@@ -166,7 +182,7 @@ input:focus {
 @media screen and (max-width: 720px) {
     .login-container {
         width: 100%;
-        margin: 20px;
+        margin: 10px;
     }
 
     .avatar {
@@ -175,8 +191,12 @@ input:focus {
     }
 
     .home img {
-        width: 30px;
-        top: 60px;
-        left: 30px;
+        width: 50px;
+        top: 20px;
+        left: 10px;
+    }
+
+    .avatar:hover {
+        transform: scale(1);
     }
 }

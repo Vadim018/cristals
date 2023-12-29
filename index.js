@@ -130,7 +130,9 @@ function toggleLightbulb() {
     body.classList.add('dark-background');
     localStorage.setItem('isLightOn', 'true');
   }
-  audioElement.play();
+  setTimeout(() => {
+    audioElement.play();
+  }, 0);
 }
 
 lightbulbContainer.addEventListener('mouseenter', () => {

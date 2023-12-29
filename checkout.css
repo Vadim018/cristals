@@ -2,8 +2,17 @@ body {
   font-family: 'Playpen Sans', cursive;
   margin: 0;
   padding: 0;
-  background: linear-gradient(60deg, #B7E9BF, #C2E8B7, #B7E8D0, #D6E8B7, #B7E8E1);
+  background: linear-gradient(60deg, #E9F2CE, #CEF2D0, #DBF3CF, #F2F0CE, #C8F7DC);
 }
+
+.home img {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  z-index: 1;
+}
+
 
 .input-group {
   position: relative;
@@ -289,5 +298,9 @@ p.number-pn {
 
   .card {
     margin-bottom: 20px;
+  }
+
+  .home img {
+    left: 10px;
   }
 }

@@ -195,8 +195,8 @@ document.addEventListener("DOMContentLoaded", function () {
             ${product.id === 1 ? '<span class="new-icon">New</span>' : ''}
             ${product.id === 2 ? '<span class="new-icon">New</span>' : ''}
             ${product.id === 3 ? '<span class="new-icon">New</span>' : ''}
-            ${product.id === 4 ? '<span class="pepper" title="Spicy"><img src="img/pepper.png"></span>' : ''}
-            ${product.id === 5 ? '<span class="vegan" title="Vegan"><img src="img/vegan.png"></span>' : ''}
+            ${product.id === 4 ? '<span class="pepper" title="Spicy"><img src="https://cdn-icons-png.flaticon.com/128/3813/3813064.png?uid=R77081381&ga=GA1.1.1848467976.1701626084&semt=ais"></span>' : ''}
+            ${product.id === 5 ? '<span class="vegan" title="Vegan"><img src="https://cdn-icons-png.flaticon.com/128/258/258566.png?uid=R77081381&ga=GA1.1.1848467976.1701626084&semt=ais"></span>' : ''}
 
                 <div class="product-card col-md-12">
                     <img src="${product.image}" alt="${product.name}" class="product-image img-fluid">
@@ -353,12 +353,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const soupsLogo = document.getElementById("soups-logo");
     const saladsLogo = document.getElementById("salads-logo");
     const dessertsLogo = document.getElementById("desserts-logo");
-    const milkshakeLogo = document.getElementById("milkshake-logo");
-    const icecreamLogo = document.getElementById("icecream-logo");
+    const milkshakesLogo = document.getElementById("milkshakes-logo");
+    const iceLogo = document.getElementById("ice-logo");
     const wineLogo = document.getElementById("wine-logo");
     const burgersLogo = document.getElementById("burgers-logo");
     const sushiLogo = document.getElementById("sushi-logo");
-    const steakLogo = document.getElementById("steak-logo");
+    const steaksLogo = document.getElementById("steaks-logo");
     const selectedCategory = sessionStorage.getItem("selectedCategory");
 
     if (selectedCategory === "Pizza") pizzaLogo.style.display = "block";
@@ -379,11 +379,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (selectedCategory === "Desserts") dessertsLogo.style.display = "block";
     else dessertsLogo.style.display = "none";
 
-    if (selectedCategory === "Milkshakes") milkshakeLogo.style.display = "block";
-    else milkshakeLogo.style.display = "none";
+    if (selectedCategory === "Milkshakes") milkshakesLogo.style.display = "block";
+    else milkshakesLogo.style.display = "none";
 
-    if (selectedCategory === "Ice") icecreamLogo.style.display = "block";
-    else icecreamLogo.style.display = "none";
+    if (selectedCategory === "Ice") iceLogo.style.display = "block";
+    else iceLogo.style.display = "none";
 
     if (selectedCategory === "Wine") wineLogo.style.display = "block";
     else wineLogo.style.display = "none";
@@ -394,14 +394,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (selectedCategory === "Sushi") sushiLogo.style.display = "block";
     else sushiLogo.style.display = "none";
 
-    if (selectedCategory === "Steaks") steakLogo.style.display = "block";
-    else steakLogo.style.display = "none";
+    if (selectedCategory === "Steaks") steaksLogo.style.display = "block";
+    else steaksLogo.style.display = "none";
 
     const allLogos = [
         pizzaLogo, drinksLogo, snacksLogo,
         soupsLogo, saladsLogo, dessertsLogo,
-        milkshakeLogo, icecreamLogo, wineLogo,
-        burgersLogo, sushiLogo, steakLogo
+        milkshakesLogo, iceLogo, wineLogo,
+        burgersLogo, sushiLogo, steaksLogo
     ];
 
     allLogos.forEach((logo) => {
@@ -450,18 +450,21 @@ document.addEventListener('DOMContentLoaded', setInitialState);
 
 function toggleLightbulb() {
     const isLightOn = body.classList.contains('dark-background');
-    if (isLightOn) {
-        lightbulbImage.src = 'img/light-on.png';
-        body.classList.remove('dark-background');
-        localStorage.setItem('isLightOn', 'false');
-    } else {
-        lightbulbImage.src = 'img/light-off.png';
-        body.classList.add('dark-background');
-        localStorage.setItem('isLightOn', 'true');
-    }
     audioElement.currentTime = 0;
-    audioElement.play();
-}
+  
+    if (isLightOn) {
+      lightbulbImage.src = 'img/light-on.png';
+      body.classList.remove('dark-background');
+      localStorage.setItem('isLightOn', 'false');
+    } else {
+      lightbulbImage.src = 'img/light-off.png';
+      body.classList.add('dark-background');
+      localStorage.setItem('isLightOn', 'true');
+    }
+    setTimeout(() => {
+      audioElement.play();
+    }, 0);
+  }
 
 lightbulbContainer.addEventListener('mouseenter', () => {
     lightbulbContainer.classList.add('show-lightbulb');
