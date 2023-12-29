@@ -389,17 +389,6 @@ address.addEventListener('input', function () {
   }
 });
 
-function generateOrderNumber() {
-  return Math.floor(1000000000000 + Math.random() * 9000000000000);
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  var orderNumberElement = document.getElementById("orderNumber");
-  if (orderNumberElement) {
-      orderNumberElement.textContent = generateOrderNumber();
-  }
-});
-
 function updateDeliveryCost() {
   var selfPickupCheckbox = document.getElementById('selfPickup');
   var continueBtn = document.getElementById('continueBtn');

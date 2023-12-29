@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
 
-            checkoutButton.textContent = "Go to payment";
+            checkoutButton.textContent = "To Purchase";
             checkoutButton.href = `checkout.html`;
         } else {
             const emptyCartMessage = document.createElement("div");
