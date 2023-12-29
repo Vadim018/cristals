@@ -4,6 +4,7 @@ body {
     background-size: 400% 400%;
     animation: gradientBG 5s infinite;
     overflow-x: hidden;
+    margin: 0;
 }
 
 #loading-screen {
@@ -24,11 +25,7 @@ body, #backToTopBtn {
     padding: 0;
 }
 
-body, .copy-right p {
-    margin: 0;
-}
-
-body, .btn-group-menu:hover, .category-name, .new-icon, footer, .contact-info p, .btn-group-menu, #backToTopBtn {
+body, .btn-group-menu:hover, .category-name, .new-icon, .btn-group-menu, #backToTopBtn {
     color: #fff;
 }
 
@@ -40,7 +37,7 @@ h2 {
     font-size: 72px;
 }
 
-h2, .btn-group-menu, .button-container a, .category, footer, .contact-info, .copy-right {
+h2, .btn-group-menu, .button-container a, .category {
     text-align: center;
 }
 
@@ -53,28 +50,25 @@ button.navbar-toggler-icon, #backToTopBtn {
     box-shadow: none;
 }
 
-.navbar .navbar-nav, footer, .copy-right {
-    padding: 20px;
-}
-
-.navbar .navbar-nav, .menu-container, .footer-content, .social-links, .contact-info, #loading-screen {
+.navbar .navbar-nav, .menu-container, #loading-screen {
     display: flex;
 }
 
-.navbar .navbar-nav, .footer-content {
+.navbar .navbar-nav {
     justify-content: space-around;
+    padding: 20px;
 }
 
-.navbar .navbar-nav, .menu-container, .footer-content, .copy-right, .contact-info, #loading-screen {
+.navbar .navbar-nav, .menu-container, #loading-screen {
     align-items: center;
 }
 
-.navbar .navbar-nav, .dark-background, .btn-group-menu::before, .button-container img, .category img, .copy-right, #loading-screen,
+.navbar .navbar-nav, .dark-background, .btn-group-menu::before, .button-container img, .category img, #loading-screen,
 .btn-group-menu:hover::before {
     width: 100%;
 }
 
-.navbar a, .button-container a, .social-links a, .contact-info a {
+.navbar a, .button-container a {
     text-decoration: none;
 }
 
@@ -145,18 +139,15 @@ button.navbar-toggler-icon, #backToTopBtn {
 .btn-group-menu {
     border-radius: 10px;
     margin-top: 30px;
+    box-sizing: border-box;
 }
 
 .btn-group-menu, .category {
     position: relative;
 }
 
-.btn-group-menu, .new-icon, .contact-info p, .copy-right {
+.btn-group-menu, .new-icon {
     font-size: 24px;
-}
-
-.btn-group-menu, .copy-right {
-    box-sizing: border-box;
 }
 
 .btn-group-menu::before {
@@ -199,7 +190,7 @@ button.navbar-toggler-icon, #backToTopBtn {
     margin: auto;
 }
 
-.menu-container, .contact-infom .copy-right, #loading-screen {
+.menu-container, #loading-screen {
     justify-content: center;
 }
 
@@ -242,51 +233,6 @@ button.navbar-toggler-icon, #backToTopBtn {
     right: 30px;
     z-index: 2;
     animation: pulse 2s infinite;
-}
-
-.footer {
-    background: #222;
-    box-shadow: rgba(0, 0, 0, 0.5);
-}
-
-.footer-content {
-    flex-wrap: wrap;
-}
-
-.social-links {
-    flex-direction: row;
-    margin: 10px;
-}
-
-.social-links a {
-    margin: 10px;
-    filter: grayscale(100%);
-    transition: filter 0.5s ease;
-}
-
-.social-links a:hover {
-    filter: none;
-}
-
-.social-links img {
-    border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
-}
-
-.social-links img {
-    width: 50px;
-}
-
-.contact-info {
-    flex-direction: column;
-}
-
-.contact-info p {
-    margin: 5px 0;
-}
-
-.copy-right {
-    background: linear-gradient(to bottom, #222, #444);
 }
 
 #backToTopBtn {
@@ -367,7 +313,7 @@ button.navbar-toggler-icon, #backToTopBtn {
         filter: invert(100%);
     }
 
-    .dark-background button span, .social-links a {
+    .dark-background button span {
         filter: none;
     }
 
@@ -382,7 +328,7 @@ button.navbar-toggler-icon, #backToTopBtn {
         border-radius: 0;
     }
 
-    .btn-group-menu, .new-icon, .contact-info p, .copy-right {
+    .btn-group-menu, .new-icon {
         font-size: 18px;
     }
 
@@ -410,18 +356,6 @@ button.navbar-toggler-icon, #backToTopBtn {
 
     .category-name, .category::before {
         opacity: 1;
-    }
-    
-    .social-links a {
-        transition: none;
-    }
-    
-    .social-links a:hover {
-        transform: none;
-    }
-    
-    .social-links img {
-        width: 40px;
     }
 
     #backToTopBtn img {

@@ -466,21 +466,16 @@ function togglePaymentOptionsVisibility() {
   var paymentMethodCash = document.getElementById('cash');
   var paymentMethodCredit = document.getElementById('credit');
   var notSelectedRadio = document.getElementById('check');
-
   var firstName = document.getElementById('firstName');
   var phone = document.getElementById('phone');
   var address = document.getElementById('address');
   var email = document.getElementById('email');
-
   var pay = document.getElementById('pay');
-
   var hr = document.getElementById('hr');
-
   var isUserDetailsEntered = firstName.value.trim() !== '' &&
     phone.value.trim() !== '' &&
     address.value.trim() !== '' &&
     email.value.trim() !== '';
-
   
   if (isUserDetailsEntered) {
     paymentMethodCash.parentElement.style.display = 'block';

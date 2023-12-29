@@ -16,7 +16,7 @@ video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1; /* Щоб відео було на задньому плані */
+    z-index: -1;
 }
 
 .home img {
@@ -63,7 +63,6 @@ video {
     align-items: center;
     margin: auto;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
-
     transition: transform 0.5s ease-in-out;
 }
 
@@ -77,16 +76,12 @@ video {
     width: 450px;
     margin: 50px auto;
     padding: 20px;
-
     border-top: 5px solid #007BFF;
     border-left: 5px solid #007BFF;
-
     border-bottom: 5px solid #e1ff00;
     border-right: 5px solid #e1ff00;
-
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
-    
 }
 
 .form-group {

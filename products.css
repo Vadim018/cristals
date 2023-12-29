@@ -350,7 +350,7 @@ h3, p, .product-card p, .quantity-button, #cart-item-count {
   width: 70px;
 }
 
-@media (max-width: 720px) {
+@media screen and (max-width: 720px) {
   header {
     margin-bottom: 100px;
   }

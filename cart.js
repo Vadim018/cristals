@@ -120,4 +120,4 @@ document.addEventListener("click", function (event) {
       window.location.href = event.target.href;
     }, 0);
   }
-}); 
+});

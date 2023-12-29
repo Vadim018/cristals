@@ -4,6 +4,7 @@ body {
     background-size: 400% 400%;
     animation: gradientBG 5s infinite;
     overflow-x: hidden;
+    margin: 0;
 }
 
 #loading-screen {
@@ -22,15 +23,8 @@ body,
 .dark-background .card-title,
 .dark-background .condition ul li,
 .close-button,
-footer,
-.contact-info p,
 #backToTopBtn {
     color: #fff;
-}
-
-body,
-.copy-right p {
-    margin: 0;
 }
 
 body,
@@ -55,10 +49,7 @@ h1,
 .opening-hours,
 .opening-hours-item,
 .card-title,
-.details-info,
-footer,
-.contact-info p,
-.copy-right {
+.details-info {
     text-align: center;
 }
 
@@ -99,7 +90,6 @@ header {
 .card-img-top,
 .details-popup,
 .details-content,
-.copy-right,
 #loading-screen {
     width: 100%;
 }
@@ -108,7 +98,7 @@ body,
 .dark-background,
 .details-popup,
 .details-content,
-#loading-screen{
+#loading-screen {
     height: 100%;
 }
 
@@ -166,10 +156,6 @@ body,
 .condition,
 .opening-hours-wrapper,
 .details-content,
-.footer-content,
-.social-links,
-.contact-info,
-.copy-right,
 #loading-screen {
     display: flex;
 }
@@ -177,9 +163,6 @@ body,
 .buttons,
 .condition,
 .details-content,
-.footer-content,
-.contact-info,
-.copy-right,
 #loading-screen {
     align-items: center;
 }
@@ -190,9 +173,7 @@ body,
 }
 
 .buttons a,
-.details-button a,
-.social-links a,
-.contact-info a {
+.details-button a {
     text-decoration: none;
 }
 
@@ -206,17 +187,13 @@ body,
 }
 
 .buttons a,
-.details-info,
-footer,
-.copy-right {
+.details-info {
     padding: 20px;
 }
 
 .buttons a,
 .opening-hours-item,
 .details-button a,
-.contact-info p,
-.copy-right p,
 .card-title {
     font-size: 24px;
 }
@@ -246,19 +223,11 @@ footer,
 
 .del-pay-section {
     justify-content: space-between;
-}
-
-.del-pay-section,
-.footer-content {
     flex-wrap: wrap;
 }
 
 .condition {
     flex: 0 1 calc(50% - 20px);
-}
-
-.condition,
-.contact-info {
     flex-direction: column;
 }
 
@@ -315,8 +284,6 @@ footer,
 
 .opening-hours-wrapper,
 .details-content,
-.contact-info,
-.copy-right,
 #loading-screen {
     justify-content: center;
 }
@@ -428,47 +395,6 @@ footer,
     outline: none;
 }
 
-.footer {
-    background: #222;
-    box-shadow: rgba(0, 0, 0, 0.5);
-}
-
-.footer-content {
-    justify-content: space-around;
-}
-
-.social-links {
-    flex-direction: row;
-}
-
-.social-links,
-.social-links a {
-    margin: 10px;
-}
-
-.social-links a {
-    filter: grayscale(100%);
-    transition: filter 0.5s ease;
-}
-
-.social-links a:hover {
-    filter: none;
-}
-
-.social-links img {
-    border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
-}
-
-.contact-info p {
-    margin: 5px 0;
-}
-
-.copy-right {
-    box-sizing: border-box;
-    background: linear-gradient(to bottom, #222, #444);
-}
-
 #backToTopBtn {
     bottom: 20px;
     right: 20px;
@@ -501,6 +427,7 @@ footer,
 }
 
 @media screen and (max-width: 720px) {
+
     h1,
     .close-button {
         font-size: 36px;
@@ -516,6 +443,7 @@ footer,
 
     .buttons a {
         border: none;
+        font-size: 18px;
     }
 
     .buttons a:hover {
@@ -526,12 +454,6 @@ footer,
     .buttons a,
     .lightbulb-container {
         display: block;
-    }
-
-    .buttons a,
-    .contact-info p,
-    .copy-right p {
-        font-size: 18px;
     }
 
     .navbar {
@@ -549,7 +471,7 @@ footer,
     .icon img {
         transition: none;
     }
-    
+
     .icon img:hover {
         transform: scale(1);
     }
@@ -619,16 +541,6 @@ footer,
     .close-button {
         top: 0;
         right: 3%;
-    }
-
-    .social-links a {
-        filter: none;
-        transition: none;
-        margin-right: 10px;
-    }
-
-    .social-links img {
-        width: 40px;
     }
 
     #backToTopBtn img {

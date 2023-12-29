@@ -12,9 +12,9 @@ function validateLogin() {
     var password = document.getElementById('password').value;
 
     if (username.trim() === '' || password.trim() === '') {
-        alert('Будь ласка, заповніть всі поля');
+        alert('Please fill in all fields!');
     } else {
-        alert('Успішний вхід!');
+        alert('Successful!');
         setTimeout(function() {
             window.location.href = 'index.html';
         }, 3000);

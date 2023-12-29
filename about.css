@@ -10,6 +10,7 @@ body {
     background-color: #fff;
     z-index: 99999;
     transition: opacity 0.5s ease-in-out;
+    justify-content: center;
 }
 
 #loading-screen, #backToTopBtn {
@@ -26,11 +27,11 @@ body {
     opacity: 0 !important;
 }
 
-body, .dark-background .card-text, .dark-background h2, .footer, .contact-info p, #backToTopBtn {
+body, .dark-background .card-text, .dark-background h2, #backToTopBtn {
     color: #fff;
 }
 
-body, .copy-right p {
+body {
     margin: 0;
 }
 
@@ -41,9 +42,6 @@ body, #backToTopBtn {
 h2 {
     font-size: 72px;
     color: #333;
-}
-
-h2, .footer, .contact-info p, .copy-right {
     text-align: center;
 }
 
@@ -97,11 +95,11 @@ header {
     gap: 50px;
 }
 
-.buttons, .restaurant-card, .footer-content, .social-links, .contact-info, .copy-right, #loading-screen {
+.buttons, .restaurant-card, #loading-screen {
     display: flex;
 }
 
-.buttons, .restaurant-card, .footer-content, .contact-info, .copy-right, #loading-screen {
+.buttons, .restaurant-card, #loading-screen {
     align-items: center;
 }
 
@@ -111,18 +109,12 @@ header {
     background-clip: text;
     transition: color 0.3s;
     border-bottom: 3px solid transparent;
-}
-
-.buttons a, .social-links a, .contact-info a {
     text-decoration: none;
+    padding: 20px;
 }
 
 .buttons a, #backToTopBtn {
     color: transparent;
-}
-
-.buttons a, .footer, .copy-right {
-    padding: 20px;
 }
 
 .buttons a:hover {
@@ -157,11 +149,11 @@ header {
     border-radius: 10px;
 }
 
-.card-text, .contact-info p, .copy-right, .buttons a {
+.card-text, .buttons a {
     font-size: 24px;
 }
 
-.card-image-left, .card-image-right, .social-links, .social-links a {
+.card-image-left, .card-image-right {
     margin: 10px;
 }
 
@@ -175,59 +167,6 @@ header {
 
 .lifted {
     transform: translateY(-20px);
-}
-
-.footer {
-    background: #222;
-    box-shadow: rgba(0, 0, 0, 0.5);
-}
-
-.footer-content {
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.contact-info {
-    flex-direction: column;
-}
-
-.social-links {
-    flex-direction: row;
-}
-
-.social-links a {
-    filter: grayscale(100%);
-    transition: filter 0.5s ease;
-}
-
-.social-links a:hover {
-    filter: none;
-}
-
-.social-links img {
-    border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
-}
-
-.social-links img {
-    width: 50px;
-}
-
-.contact-info, .copy-right, #loading-screen {
-    justify-content: center;
-}
-
-.contact-info p {
-    margin: 5px 0;
-}
-
-.copy-right {
-    box-sizing: border-box;
-    background: linear-gradient(to bottom, #222, #444);
-}
-
-.copy-right, .dark-background, #loading-screen {
-    width: 100%;
 }
 
 #backToTopBtn {
@@ -264,7 +203,7 @@ header {
     }
 }
 
-@media (max-width: 720px) {
+@media screen and (max-width: 720px) {
     header {
         height: 350px;
     }
