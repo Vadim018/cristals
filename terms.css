@@ -3,7 +3,7 @@ body {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
-    background: url('https://cdn.pixabay.com/photo/2015/12/26/21/20/forest-1109180_1280.jpg') no-repeat center center fixed;
+    background: url('https://cdn.pixabay.com/photo/2018/08/21/23/29/forest-3622519_1280.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -99,7 +99,7 @@ p {
 @media screen and (max-width: 720px) {
     .home img {
         top: 20px;
-        left: 20px;
+        left: 10px;
         width: 50px;
     }
 

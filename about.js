@@ -130,12 +130,12 @@ function setInitialState() {
 }
 
 function turnOnLight() {
-    lightbulbImage.src = 'img/light-on1.png';
+    lightbulbImage.src = 'https://cdn-icons-png.flaticon.com/128/3073/3073665.png?uid=R77081381&ga=GA1.1.1848467976.1701626084&semt=ais';
     body.classList.remove('dark-background');
 }
 
 function turnOffLight() {
-    lightbulbImage.src = 'img/light-off1.png';
+    lightbulbImage.src = 'https://cdn-icons-png.flaticon.com/128/3592/3592067.png?uid=R77081381&ga=GA1.1.1848467976.1701626084&semt=ais';
     body.classList.add('dark-background');
 }
 
