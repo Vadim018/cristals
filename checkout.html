@@ -61,20 +61,20 @@
                 <h4 class="mb-3">To arrange an order</h4>
                 <form class="needs-validation" novalidate="">
                     <div class="row g-3">
-                        <div class="col-sm-12 mb-3">
+                        <div class="col-12 mb-3">
                             <label for="firstName" class="form-label">First name</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="Bond Filter" value="" maxlength="50" required>
+                            <input type="text" class="form-control" id="firstName" placeholder="Ivan Filter" value="" maxlength="50" required>
                             <div class="invalid-feedback">
-                                Valid first name is required.
+                                Please enter your name!
                             </div>
                         </div>
                         <div class="col-12 mb-3">
                             <label for="phone" class="form-label">Phone</label>
                             <div class="input-group has-validation">
-                                <span class="input-group-text">+38</span>
-                                <input type="tel" class="form-control" id="phone" placeholder="097-333-33-33" maxlength="13" required>
+                                <span class="input-group-text">🇺🇦 +38</span>
+                                <input type="tel" class="form-control" id="phone" placeholder="067-321-23-21" maxlength="13" required>
                                 <div class="invalid-feedback">
-                                    Your phone is required.
+                                    Please enter your phone!
                                 </div>
                             </div>
                         </div>
@@ -82,18 +82,17 @@
                             <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-control" id="email" placeholder="nodeJS@gmail.com" maxlength="50" required>
                             <div class="invalid-feedback">
-                                Please enter a valid email address.
+                                Please enter your email!
                             </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 mb-3">
                             <label for="address" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="address" placeholder="Kyiv Street, build. 1/a" maxlength="50" required>
+                            <input type="text" class="form-control" id="address" placeholder="Kyiv Street, build 13" maxlength="50" required>
                             <div class="invalid-feedback">
-                                Please enter your address.
+                                Please enter your address!
                             </div>
                         </div>
                     </div>
-                    <hr id="hr" class="my-4">
                     <div id="notificationContainer"></div>
                     <div class="my-3">
                         <div class="form-check">
@@ -106,7 +105,7 @@
                     <div class="my-3">
                         <div class="form-check">
                             <input id="check" name="paymentMethod" type="radio" class="form-check-input" checked>
-                            <label class="form-check-label" for="check">Not Selected</label>
+                            <label class="form-check-label" for="check">None</label>
                         </div>
                         <div class="form-check">
                             <input id="cash" name="paymentMethod" type="radio" class="form-check-input" required="">
@@ -124,7 +123,7 @@
                                     <label for="cc-number" class="form-label">Card number</label>
                                     <input type="text" class="form-control" id="cc-number" placeholder="**** **** **** ****" required>
                                     <div class="invalid-feedback" id="cc-number-error">
-                                        Credit card number is required.
+                                        Credit card number is required!
                                     </div>
                                     <div class="valid-feedback" id="cc-number-success">
                                         &#10004; Valid
@@ -134,7 +133,7 @@
                                     <label for="cc-expiration" class="form-label">Expiration</label>
                                     <input type="text" class="form-control" id="cc-expiration" placeholder="mm/yy" required>
                                     <div class="invalid-feedback" id="cc-expiration-error">
-                                        Expiration date required.
+                                        Expiration date is required!
                                     </div>
                                     <div class="valid-feedback" id="cc-expiration-success">
                                         &#10004; Valid
@@ -151,7 +150,7 @@
                                         </div>
                                     </div>
                                     <div class="invalid-feedback" id="cc-cvv-error">
-                                        Security code required.
+                                        Security code is required!
                                     </div>
                                     <div class="valid-feedback" id="cc-cvv-success">
                                         &#10004; Valid

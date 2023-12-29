@@ -21,18 +21,7 @@ video {
 
 .home img {
     filter: invert(100%);
-    width: 50px;
-}
-
-.home {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 1;
-    background-color: transparent;
-    backdrop-filter: blur(30px);
-    border-radius: 10px;
-    padding: 5px;
+    width: 30px;
 }
 
 #loading-screen {
@@ -186,9 +175,7 @@ input:focus {
     }
 
     .home img {
-        width: 50px;
-        top: 20px;
-        left: 10px;
+        width: 30px;
     }
 
     .avatar:hover {

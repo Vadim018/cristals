@@ -2,7 +2,8 @@ body {
   font-family: 'Playpen Sans', cursive;
   margin: 0;
   padding: 0;
-  background-color: #F8F9FA;
+  background: linear-gradient(to bottom, #88C3EF, #EEF0CB);
+  background-size: 100% 200%;
 }
 
 .header-container {
@@ -279,6 +280,11 @@ p {
 }
 
 @media screen and (max-width: 720px) {
+  .row {
+    flex-direction: column;
+    margin: 20px auto;
+  }
+
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
   }

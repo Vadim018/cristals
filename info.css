@@ -427,9 +427,7 @@ body,
 }
 
 @media screen and (max-width: 720px) {
-
-    h1,
-    .close-button {
+    h1, .close-button {
         font-size: 36px;
     }
 
@@ -450,9 +448,7 @@ body,
         color: transparent;
     }
 
-    .buttons,
-    .buttons a,
-    .lightbulb-container {
+    .buttons, .buttons a, .lightbulb-container {
         display: block;
     }
 
@@ -476,44 +472,37 @@ body,
         transform: scale(1);
     }
 
+    section.del-pay-section {
+        flex-direction: column;
+    }
+
+    .condition {
+        border: 2px solid #AAA9A9;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 10px;
+    }
+
     .condition br {
         display: none;
     }
 
-    .del-pay-section {
-        align-items: center;
-    }
-
-    .del-pay-section,
     .opening-hours-grid {
         display: flex;
         flex-direction: column;
     }
 
-    .condition,
-    .condition ul li,
-    .additional-condition ul li {
-        text-align: center;
-        margin: 0;
-    }
-
-    .condition,
     .opening-hours-grid {
         width: 100%;
     }
 
-    .condition h2,
-    .opening-hours-item span {
+    .condition h2, .opening-hours-item span {
         font-size: 24px;
     }
 
     ul {
         list-style-type: none;
         padding: 0;
-    }
-
-    .additional-condition ul li {
-        padding: 10px;
     }
 
     .span2 {
@@ -528,13 +517,11 @@ body,
         width: 100%;
     }
 
-    .details-info,
-    .card {
+    .details-info, .card {
         margin: 20px;
     }
 
-    .card:hover,
-    .social-links a:hover {
+    .card:hover, .social-links a:hover {
         transform: none;
     }
 
