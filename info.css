@@ -7,6 +7,56 @@ body {
     margin: 0;
 }
 
+.contacts_section {
+    margin: 50px auto;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    border: 2px solid #333;
+    width: 50%;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.phones a {
+    border-bottom: 2px solid #333;
+}
+
+.tild {
+    color: #333;
+}
+
+.contact-info p {
+    color: #fff;
+    font-size: 24px;
+    margin: 20px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.dark-background p {
+    color: #999;
+}
+
+.dark-background p a {
+    color: #999;
+    font-weight: normal;
+}
+
 #loading-screen {
     background-color: #fff;
     z-index: 99999;
@@ -412,6 +462,37 @@ body,
     box-shadow: 0 0 20px rgba(255, 255, 255, 255);
 }
 
+.social {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: 100px;
+    margin: 10px auto;
+}
+
+.social img {
+    width: 50px;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px auto;
+    font-size: 24px;
+    color: #000;
+}
+
+.dark-background .social {
+    filter: invert(100%);
+}
+
+.dark-background .copyright {
+    color: #fff;
+}
+
 @keyframes gradientBG {
     0% {
         background-position: 0% 50%;
@@ -540,5 +621,21 @@ body,
 
     #backToTopBtn:hover {
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+
+    .social img {
+        width: 30px;
+    }
+
+    .copyright {
+        font-size: 18px;
+    }
+
+    .contact-section {
+        width: 95%;
+    }
+
+    .contact-info p {
+        font-size: 18px;
     }
 }

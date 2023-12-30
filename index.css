@@ -258,6 +258,37 @@ button.navbar-toggler-icon, #backToTopBtn {
     outline: none;
 }
 
+.social {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: 100px;
+    margin: 10px auto;
+}
+
+.social img {
+    width: 50px;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px auto;
+    font-size: 24px;
+    color: #000;
+}
+
+.dark-background .social {
+    filter: invert(100%);
+}
+
+.dark-background .copyright {
+    color: #fff;
+}
+
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -364,5 +395,13 @@ button.navbar-toggler-icon, #backToTopBtn {
 
     #backToTopBtn:hover {
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+
+    .social img {
+        width: 30px;
+    }
+
+    .copyright {
+        font-size: 18px;
     }
 }

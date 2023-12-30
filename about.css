@@ -191,6 +191,37 @@ header {
     box-shadow: 0 0 20px rgba(255, 255, 255, 255);
 }
 
+.social {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: 100px;
+    margin: 10px auto;
+}
+
+.social img {
+    width: 50px;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px auto;
+    font-size: 24px;
+    color: #000;
+}
+
+.dark-background .social {
+    filter: invert(100%);
+}
+
+.dark-background .copyright {
+    color: #fff;
+}
+
 @keyframes gradientBG {
     0% {
         background-position: 0% 50%;
@@ -253,21 +284,8 @@ header {
         width: 100%;
     }
 
-    .card-text, .buttons a, .contact-info p, .copy-right {
+    .card-text, .buttons a {
         font-size: 18px;
-    }
-
-    .social-links a {
-        filter: none;
-        transition: none;
-    }
-    
-    .social-links a:hover {
-        transform: none;
-    }
-    
-    .social-links img {
-        width: 40px;
     }
 
     #backToTopBtn img {
@@ -284,5 +302,13 @@ header {
 
     .lifted {
         transform: translateY(0);
+    }
+
+    .social img {
+        width: 30px;
+    }
+
+    .copyright {
+        font-size: 18px;
     }
 }
