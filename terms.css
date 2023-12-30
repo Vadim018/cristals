@@ -3,7 +3,7 @@ body {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
-    background: url('https://cdn.pixabay.com/photo/2018/08/21/23/29/forest-3622519_1280.jpg') no-repeat center center fixed;
+    background: url('https://img.freepik.com/free-photo/color-breakfast-outdoors-glass-white_1127-2375.jpg?w=996&t=st=1703928579~exp=1703929179~hmac=6578af14cf652dd418d92a72b2d28960f176034568fcb24f7f9c395cb92ae94f') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -12,13 +12,13 @@ body {
     margin-left: 50px;
     margin-right: 50px;
     border: 10px inset #8D8D8D;
-    background-color: rgba(234, 255, 255, 0.7);
+    background-color: rgba(234, 255, 255, 0.9);
 }
 
 .block {
     border: 10px inset #8D8D8D;
     margin: 50px;
-    background-color: rgba(234, 255, 255, 0.7);
+    background-color: rgba(234, 255, 255, 0.9);
 }
 
 .container {
