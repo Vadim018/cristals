@@ -85,6 +85,15 @@ video {
     font-weight: bold;
 }
 
+.form-control {
+    color:#000;
+    font-size: 20px;
+}
+
+.form-control:focus {
+    color: #000;
+}
+
 input, label {
     font-size: 18px;
 }
@@ -95,6 +104,14 @@ input {
 
 input:focus {
     outline: none;
+}
+
+.input-group-prepend span {
+    background-color: #fff;
+}
+
+.input-group-text img {
+    width: 20px;
 }
 
 .form-group input {
@@ -110,11 +127,6 @@ input:focus {
     border-color: #007BFF;
 }
 
-.or {
-    text-align: center;
-    color: #ccc;
-}
-
 .login-button {
     color: #fff;
 }
@@ -124,7 +136,7 @@ input:focus {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 0 0 20px 0;
+    margin: auto;
     width: 100%;
     background-color: #007BFF;
     padding: 10px;
@@ -139,14 +151,23 @@ input:focus {
     background-color: #0050a6;
 }
 
-.register-link a {
-    color: #007BFF;
+.socials {
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    border: none;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px 60px;
+}
+
+.socials img {
+    width: 50px;;
+}
+
+.socials a {
     text-decoration: none;
-    cursor: pointer;
+}
+
+.git {
+    filter: invert(100%);
 }
 
 @keyframes gradientBG {
