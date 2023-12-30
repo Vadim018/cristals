@@ -52,124 +52,124 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const categories = {
-        Pizza: [
-            { id: 1, name: "~ Chicken ~", description: "chicken fillet, mushrooms, Mozzarella, Parmesan, spices, white sauce", price: 175, image: "img/pizza14.jpg", isNew: true },
-            { id: 2, name: "~ Calzone ~", description: "ham, mozzarella, tomato, sauce", price: 125, image: "img/pizza15.jpg", isNew: true },
-            { name: "~ Carbonara ~", description: "tomato sauce, cheese, bacon, egg, oregano", price: 180, image: "img/pizza1.jpg" },
-            { name: "~ Pepperoni ~", description: "tomato sauce, cheese, salami", price: 180, image: "img/pizza2.jpg" },
-            { name: "~ 4 Cheese ~", description: "cream sauce, Cheddar, Mozzarella, Dor Blue, Gouda", price: 400, image: "img/pizza3.jpg" },
-            { name: "~ Prosciutto ~", description: "tomato sauce, ham, arugula, oregano", price: 350, image: "img/pizza4.jpg" },
-            { name: "~ Cheeseburger ~", description: "cheese sauce, olives, onion, bell pepper", price: 150, image: "img/pizza5.jpg" },
-            { name: "~ Bavarian ~", description: "tomato sauce, ham, sausages, tomato", price: 200, image: "img/pizza6.jpg" },
-            { name: "~ Hawaiian ~", description: "cream sauce, tomatoes, pineapple, chicken, oregano", price: 135, image: "img/pizza7.jpg" },
-            { id: 4, name: "~ Mushroom ~", description: "tomato sauce, ham, cheese, mushrooms, hot pepper", price: 120, image: "img/pizza8.jpg" },
-            { name: "~ Dor Blue ~", description: "cream sauce, pear, onion, Roquefort cheese", price: 350, image: "img/pizza9.jpg" },
-            { name: "~ Pesto ~", description: "tomato sauce, olives, mushrooms, salami", price: 270, image: "img/pizza10.jpg" },
-            { name: "~ Pulled Pork ~", description: "cheese sauce, chili pepper, onion, beef", price: 100, image: "img/pizza11.jpg" },
-            { id: 5, name: "~ Margherita ~", description: "tomato sauce, tomatoes, cheese", price: 100, image: "img/pizza12.jpg" },
-            { name: "~ Calzone ~", description: "chicken fillet, Mozzarella, mushrooms, cream sauce", price: 120, image: "img/pizza13.jpg" }
-        ],
-
         Burgers: [
-            { name: "~ Big Tasty® ~", description: "*MENU* burger, 500ml cola, french fries, 2 sauces", price: 200, image: "img/menu1.jpg" },
-            { name: "~ Big Mac® ~", description: "*MENU* burger, 500ml cola, french fries, 2 sauces", price: 250, image: "img/menu2.jpg" },
-            { name: "~ Cheeseburger ~", description: "burger, french fries, sauce", price: 130, image: "img/menu3.jpg" },
-            { name: "~ McChicken ~", description: "burger", price: 80, image: "img/menu4.jpg" },
-            { name: "~ Royal de Luxe ~", description: "burger", price: 100, image: "img/menu5.jpg" },
-            { name: "~ Chicken ~", description: "burger", price: 80, image: "img/menu6.jpg" },
-            { name: "~ Cheeseburger 2X ~", description: "burger", price: 70, image: "img/menu7.jpg" },
-            { name: "~ Royal ~", description: "burger, cheese sticks", price: 100, image: "img/menu11.jpg" },
-            { name: "~ Chicken Bacon ~", description: "burger", price: 85, image: "img/menu12.jpg" }
-        ],
-
-        Snacks: [
-            { name: "~ Nuggets ~", description: "chicken (10 pcs.)", price: 45, image: "img/nuggets.jpg" },
-            { name: "~ Cheese Sticks ~", description: "cheese (10 pcs.)", price: 50, image: "img/sticks.jpg" },
-            { name: "~ French Fries ~", description: "300g, 2 sauces", price: 40, image: "img/menu10.jpg" },
-            { name: "~ Dumplings ~", description: "beef (20 pcs.)", price: 60, image: "img/dumplings.jpg" },
-            { name: "~ Cheese Platter ~", description: "Gouda, Cheddar, Brie (300g)", price: 80, image: "img/cheesse.jpg" },
-            { name: "~ Grilled Sausages ~", description: "pork (5 pcs.)", price: 70, image: "img/sausages.jpg" },
-            { name: "~ Corn ~", description: "corn (1 pc.)", price: 30, image: "img/corn.jpg" },
-            { name: "~ Chips ~", description: "with bacon 'Pringles' (300g)", price: 100, image: "img/chips.jpg" },
-            { name: "~ Bruschetta ~", description: "meat mix (10 pcs.)", price: 80, image: "img/bruschetta.jpg" }
-        ],
-
-        Soups: [
-            { name: "~ Goulash ~", description: "veal, onion, greens", price: 55, image: "img/soup1.jpg" },
-            { name: "~ Khajan-guk ~", description: "beef, udon, onion", price: 75, image: "img/soup3.jpg" },
-            { name: "~ Borscht ~", description: "pork, beets, pasta", price: 35, image: "img/soup4.jpg" }
-        ],
-
-        Salads: [
-            { name: "~ Caesar ~", description: "cherry tomatoes, poached egg, chicken, greens, Parmesan", price: 30, image: "img/salad1.jpg" },
-            { name: "~ Greek ~", description: "cucumbers, tomatoes, bell pepper, onion, olives, Feta", price: 20, image: "img/salad2.jpg" },
-            { name: "~ Fish ~", description: "salmon, iceberg, romaine, sauce, croutons, cherry tomatoes", price: 50, image: "img/salad3.jpg" },
-        ],
-    
-        Steaks: [
-            { name: "~ Chateaubriand ~", description: "beef", price: 150, image: "img/steak1.jpg" },
-            { name: "~ Club Steak ~", description: "veal", price: 120, image: "img/steak3.jpg" },
-            { name: "~ Ribeye ~", description: "beef", price: 300, image: "img/steak4.jpg" }
-        ],
-
-        Wine: [
-            { id: 3, name: "~ Tempranillo ~", description: "Red wine. Spain. Crafted from Tempranillo grapes, this Reserva boasts a deep and complex flavor profile. It features prominent notes of dark berries, leather, and tobacco, with a subtle hint of vanilla from oak barrel aging. Its well-balanced structure and velvety tannins make it an excellent choice for pairing with hearty dishes.", price: 2700, image: "img/wine9.jpg", isNew: true },
-            { name: "~ Sauvignon Blanc ~", description: "White wine. New Zealand. Made from Sauvignon Blanc grapes, known for its bright acidity and aromas of tropical fruits, especially ripe gooseberry and lime. It has a refreshing and fruity taste with a pleasant mineral undertone.", price: 550, image: "img/wine1.jpg" },
-            { name: "~ Chardonnay ~", description: "White wine. France. Renowned for its elegance and rich flavor. It features notes of yellow apples, pears, and walnut, as well as hints of vanilla and creamy caramel due to oak barrel aging.", price: 1200, image: "img/wine2.jpg" },
-            { name: "~ Pinot Blanc ~", description: "White wine. France. Made from Pinot Blanc grapes, it has a light and crisp taste with notes of cherry, strawberry, and subtle herbal nuances.", price: 700, image: "img/wine8.jpg" },
-            { name: "~ Cabernet ~", description: "Red wine. USA. Produced from Cabernet Sauvignon grapes, known for its structure and flavors of blackcurrant, blackberry, and vanilla. It has a long aftertaste and pairs excellently with red meat.", price: 1500, image: "img/wine4.jpg" },
-            { name: "~ Zinfandel ~", description: "Red wine. USA. It has a rich taste with notes of blackberries, plums, and black pepper. It boasts a deep red color and a pronounced aroma.", price: 700, image: "img/wine5.jpg" },
-            { name: "~ Malbec ~", description: "Red wine. Argentina. Made from Malbec grapes, it is characterized by a juicy taste with notes of plum, black cherry, and chocolate.", price: 600, image: "img/wine6.jpg" },
-            { name: "~ Shiraz ~", description: "Red wine. Australia. It has a rich and expressive taste with notes of blackberries, lavender, and pepper. It is characterized by a deep color and excellent structure.", price: 1000, image: "img/wine7.jpg" },
-            { name: "~ Merlot ~", description: "Red wine. USA. Produced in the Napa Valley region of California. It has a soft and rounded taste with pronounced notes of black cherry, chocolate, and wooden spices.", price: 900, image: "img/wine3.jpg" }
+            { name: "Big Tasty", description: "burger, 500ml cola, french fries, 2 sauces", price: 270, image: "img/burger1.jpg" },
+            { name: "Big Mac", description: "burger, 500ml cola, french fries, 1 sauce", price: 250, image: "img/burger2.jpg" },
+            { name: "Big Chicken", description: "burger, 300ml, french fries, 1 sauce", price: 180, image: "img/burger3.jpg" },
+            { name: "Cheeseburger", description: "burger, 300ml, french fries, 1 sauce", price: 150, image: "img/burger4.jpg" },
+            { name: "Royal Deluxe", description: "burger", price: 135, image: "img/burger5.jpg" },
+            { name: "Chickenburger", description: "burger + sticks", price: 120, image: "img/burger6.jpg" },
+            { name: "Chicken Mac", description: "burger", price: 100, image: "img/burger7.jpg" },
+            { name: "Royal", description: "burger", price: 100, image: "img/burger8.jpg" },
+            { name: "Chicken Bacon", description: "burger", price: 75, image: "img/burger9.jpg" }
         ],
 
         Sushi: [
-            { name: "~ Dragon ~", description: "salmon, avocado, nori, cucumber 1kg", price: 800, image: "img/sushi1.jpg" },
-            { name: "~ Maki ~", description: "salmon, cucumber, sauce 1kg", price: 800, image: "img/sushi2.jpg" },
-            { name: "~ Unagi ~", description: "rice, jasmine, nori 1kg", price: 900, image: "img/sushi3.jpg" },
-            { name: "~ Maguro ~", description: "tuna, tataki, rice 1kg", price: 1000, image: "img/sushi4.jpg" },
-            { name: "~ Ebi ~", description: "shrimp, wasabi, soy sauce 1kg", price: 1000, image: "img/sushi5.jpg" },
-            { name: "~ California ~", description: "crab, avocado, cucumber, sesame 1kg", price: 1500, image: "img/sushi6.jpg" },
-            { name: "~ Sake ~", description: "salmon, rice, wasabi 1kg", price: 700, image: "img/sushi7.jpg" },
-            { name: "~ Toro ~", description: "tuna, toro, rice 1kg", price: 850, image: "img/sushi8.jpg" },
-            { name: "~ Gunkan ~", description: "salmon roe, nori, rice 2kg", price: 800, image: "img/sushi9.jpg" },
-            { name: "~ Philadelphia ~", description: "salmon, cream cheese, avocado, sesame 2kg", price: 1200, image: "img/sushi10.jpg" },
-            { name: "~ Hamachi ~", description: "tuna, wasabi, soy sauce 2kg", price: 1000, image: "img/sushi11.jpg" },
-            { name: "~ Futomaki ~", description: "avocado, cucumber, pepper 2kg", price: 1000, image: "img/sushi12.jpg" }
+            { name: "Dragon", description: "salmon, avocado, nori, cucumber ~ (1kg)", price: 1000, image: "img/sushi1.jpg" },
+            { name: "Maki", description: "salmon, cucumber, sauce ~ (1kg)", price: 1200, image: "img/sushi2.jpg" },
+            { name: "Unagi", description: "rice, jasmine, nori ~ (1kg)", price: 1300, image: "img/sushi3.jpg" },
+            { name: "Maguro", description: "tuna, tataki, rice ~ (1kg)", price: 1200, image: "img/sushi4.jpg" },
+            { name: "Ebi", description: "shrimp, wasabi, soy sauce ~ (1kg)", price: 1300, image: "img/sushi5.jpg" },
+            { name: "California", description: "crab, avocado, cucumber, sesame ~ (1kg)", price: 1700, image: "img/sushi6.jpg" },
+            { name: "Sake", description: "salmon, rice, wasabi ~ (1kg)", price: 800, image: "img/sushi7.jpg" },
+            { name: "Toro", description: "tuna, toro, rice ~ (1kg)", price: 800, image: "img/sushi8.jpg" },
+            { name: "Gunkan", description: "salmon roe, nori, rice ~ (2kg)", price: 1000, image: "img/sushi9.jpg" },
+            { name: "Philadelphia", description: "salmon, cream cheese, avocado, sesame ~ (2kg)", price: 1800, image: "img/sushi10.jpg" },
+            { name: "Hamachi", description: "tuna, wasabi, soy sauce ~ (2kg)", price: 1800, image: "img/sushi11.jpg" },
+            { name: "Futomaki", description: "avocado, cucumber, pepper ~ (2kg)", price: 1500, image: "img/sushi12.jpg" }
+        ],
+
+        Pizza: [
+            { name: "Chicken", description: "chicken fillet, mushrooms, Mozzarella, Parmesan, spices, white sauce", price: 200, image: "img/pizza14.jpg" },
+            { name: "Calzone", description: "ham, Mozzarella, tomato, sauce", price: 120, image: "img/pizza15.jpg" },
+            { name: "Carbonara", description: "tomato sauce, cheese, bacon, egg, oregano", price: 200, image: "img/pizza1.jpg" },
+            { name: "Pepperoni", description: "tomato sauce, cheese, salami", price: 200, image: "img/pizza2.jpg" },
+            { name: "4 Cheese", description: "cream sauce, Cheddar, Mozzarella, Dor Blue, Gouda", price: 300, image: "img/pizza3.jpg" },
+            { name: "Prosciutto", description: "tomato sauce, ham, arugula, oregano", price: 400, image: "img/pizza4.jpg" },
+            { name: "Cheeseburger", description: "cheese sauce, olives, onion, bell pepper", price: 200, image: "img/pizza5.jpg" },
+            { name: "Bavarian", description: "tomato sauce, ham, sausages, tomato", price: 200, image: "img/pizza6.jpg" },
+            { name: "Hawaiian", description: "cream sauce, tomatoes, pineapple, chicken, oregano", price: 150, image: "img/pizza7.jpg" },
+            { id: 1, name: "Mushroom", description: "tomato sauce, ham, cheese, mushrooms, hot pepper", price: 150, image: "img/pizza8.jpg" },
+            { name: "Dor Blue", description: "cream sauce, pear, onion, Roquefort", price: 400, image: "img/pizza9.jpg" },
+            { name: "Pesto", description: "tomato sauce, olives, mushrooms, salami", price: 250, image: "img/pizza10.jpg" },
+            { name: "Pulled Pork", description: "cheese sauce, chili pepper, onion, beef", price: 100, image: "img/pizza11.jpg" },
+            { id: 2, name: "Margherita", description: "tomato sauce, tomatoes, cheese", price: 100, image: "img/pizza12.jpg" },
+            { name: "Calzone", description: "chicken fillet, Mozzarella, mushrooms, cream sauce", price: 120, image: "img/pizza13.jpg" }
+        ],
+
+        Snacks: [
+            { name: "Nuggets", description: "chicken (10 pcs.)", price: 50, image: "img/snack1.jpg" },
+            { name: "Cheese Sticks", description: "cheese (10 pcs.)", price: 50, image: "img/snack2.jpg" },
+            { name: "French Fries", description: "300g, 2 sauces", price: 50, image: "img/snack3.jpg" },
+            { name: "Dumplings", description: "beef (20 pcs.)", price: 70, image: "img/snack4.jpg" },
+            { name: "Cheese Platter", description: "Gouda, Cheddar, Brie (300g)", price: 120, image: "img/snack5.jpg" },
+            { name: "Grilled Sausages", description: "pork (5 pcs.)", price: 120, image: "img/snack6.jpg" },
+            { name: "Corn", description: "corn (1 pc.)", price: 50, image: "img/snack7.jpg" },
+            { name: "Chips", description: "with bacon (300g)", price: 120, image: "img/snack8.jpg" },
+            { name: "Bruschetta", description: "meat mix (10 pcs.)", price: 150, image: "img/snack9.jpg" }
+        ],
+
+        Soups: [
+            { name: "Goulash", description: "veal, onion, greens ~ (500ml)", price: 60, image: "img/soup1.jpg" },
+            { name: "Khajan-guk", description: "beef, udon, onion ~ (500ml)", price: 70, image: "img/soup2.jpg" },
+            { name: "Borscht", description: "pork, beets, pasta ~ (500ml)", price: 30, image: "img/soup3.jpg" }
+        ],
+
+        Salads: [
+            { name: "Caesar", description: "cherry tomatoes, poached egg, chicken, greens, Parmesan", price: 50, image: "img/salad1.jpg" },
+            { name: "Greek", description: "cucumbers, tomatoes, bell pepper, onion, olives, Feta", price: 50, image: "img/salad2.jpg" },
+            { name: "Fish", description: "salmon, iceberg, romaine, sauce, croutons, cherry tomatoes", price: 70, image: "img/salad3.jpg" },
+        ],
+
+        Steaks: [
+            { name: "Chateaubriand", description: "beef", price: 150, image: "img/steak1.jpg" },
+            { name: "Club Steak", description: "veal", price: 120, image: "img/steak2.jpg" },
+            { name: "Ribeye", description: "beef", price: 250, image: "img/steak3.jpg" }
+        ],
+
+        Wine: [
+            { name: "Sauvignon Blanc", description: "White wine. New Zealand. Made from Sauvignon Blanc grapes, known for its bright acidity and aromas of tropical fruits, especially ripe gooseberry and lime. It has a refreshing and fruity taste with a pleasant mineral undertone.", price: 550, image: "img/wine1.jpg" },
+            { name: "Chardonnay", description: "White wine. France. Renowned for its elegance and rich flavor. It features notes of yellow apples, pears, and walnut, as well as hints of vanilla and creamy caramel due to oak barrel aging.", price: 1200, image: "img/wine2.jpg" },
+            { name: "Merlot", description: "Red wine. USA. Produced in the Napa Valley region of California. It has a soft and rounded taste with pronounced notes of black cherry, chocolate, and wooden spices.", price: 900, image: "img/wine3.jpg" },
+            { name: "Cabernet", description: "Red wine. USA. Produced from Cabernet Sauvignon grapes, known for its structure and flavors of blackcurrant, blackberry, and vanilla. It has a long aftertaste and pairs excellently with red meat.", price: 1500, image: "img/wine4.jpg" },
+            { name: "Zinfandel", description: "Red wine. USA. It has a rich taste with notes of blackberries, plums, and black pepper. It boasts a deep red color and a pronounced aroma.", price: 700, image: "img/wine5.jpg" },
+            { name: "Malbec", description: "Red wine. Argentina. Made from Malbec grapes, it is characterized by a juicy taste with notes of plum, black cherry, and chocolate.", price: 600, image: "img/wine6.jpg" },
+            { name: "Shiraz", description: "Red wine. Australia. It has a rich and expressive taste with notes of blackberries, lavender, and pepper. It is characterized by a deep color and excellent structure.", price: 1000, image: "img/wine7.jpg" },
+            { name: "Pinot Blanc", description: "White wine. France. Made from Pinot Blanc grapes, it has a light and crisp taste with notes of cherry, strawberry, and subtle herbal nuances.", price: 700, image: "img/wine8.jpg" },
+            { name: "Tempranillo", description: "Red wine. Spain. Crafted from Tempranillo grapes, this Reserva boasts a deep and complex flavor profile. It features prominent notes of dark berries, leather, and tobacco, with a subtle hint of vanilla from oak barrel aging. Its well-balanced structure and velvety tannins make it an excellent choice for pairing with hearty dishes.", price: 2700, image: "img/wine9.jpg" },
         ],
 
         Desserts: [
-            { name: "~ Tiramisu ~", description: "Mascarpone, ladyfingers, cocoa, espresso (300g)", price: 70, image: "img/dessert1.jpg" },
-            { name: "~ Fraise ~", description: "muslin, syrup, strawberries, marzipan, vanilla (250g)", price: 80, image: "img/dessert2.jpg" },
-            { name: "~ Prague ~", description: "sponge cake, cocoa, cream, sour cream, chocolate (200g)", price: 100, image: "img/dessert3.jpg" }
+            { name: "Tiramisu", description: "Mascarpone, ladyfingers, cocoa, espresso (300g)", price: 70, image: "img/dessert1.jpg" },
+            { name: "Fraise", description: "muslin, syrup, strawberries, marzipan, vanilla (250g)", price: 80, image: "img/dessert2.jpg" },
+            { name: "Prague", description: "sponge cake, cocoa, cream, sour cream, chocolate (200g)", price: 100, image: "img/dessert3.jpg" }
         ],
 
         Ice: [
-            { name: "~ Chocolate ~", description: "cocoa, cinnamon (250g)", price: 100, image: "img/icecream1.jpg" },
-            { name: "~ Vanilla ~", description: "vanilla, syrup (200g)", price: 150, image: "img/icecream3.jpg" },
-            { name: "~ Caramel ~", description: "caramel (200g)", price: 70, image: "img/icecream4.jpg" }
+            { name: "Chocolate", description: "cocoa, cinnamon (250g)", price: 120, image: "img/ice1.jpg" },
+            { name: "Vanilla", description: "vanilla, syrup (200g)", price: 150, image: "img/ice2.jpg" },
+            { name: "Caramel", description: "caramel (200g)", price: 100, image: "img/ice3.jpg" }
         ],
 
         Drinks: [
-            { name: "~ Latte ~", description: "400ml", price: 55, image: "img/coffee2.jpg" },
-            { name: "~ Cappuccino ~", description: "300ml", price: 35, image: "img/coffee1.jpg" },
-            { name: "~ Americano ~", description: "with milk, 180ml", price: 20, image: "img/coffee3.jpg" },
-            { name: "~ Espresso ~", description: "50ml", price: 30, image: "img/coffee4.jpg" },
-            { name: "~ Beer ~", description: "500ml", price: 50, image: "img/beer.jpg" },
-            { name: "~ Laguna ~", description: "350ml", price: 75, image: "img/cocktail.jpg" },
-            { name: "~ Mojito ~", description: "200ml", price: 100, image: "img/mojito.jpg" },
-            { name: "~ Whiskey ~", description: "100ml", price: 50, image: "img/whiskey.jpg" },
-            { name: "~ Juice ~", description: "orange, 1L", price: 30, image: "img/juice.jpg" },
-            { name: "~ Water ~", description: "1L", price: 30, image: "img/water.jpg" },
-            { name: "~ Cola ~", description: "300ml", price: 15, image: "img/cola.jpg" },
-            { name: "~ Tea ~", description: "250ml", price: 20, image: "img/tea.jpg" }
+            { name: "Latte", description: "300ml", price: 50, image: "img/drink1.jpg" },
+            { name: "Cappuccino", description: "300ml", price: 30, image: "img/drink2.jpg" },
+            { name: "Americano", description: "with milk, 180ml", price: 30, image: "img/drink3.jpg" },
+            { name: "Espresso", description: "50ml", price: 30, image: "img/drink4.jpg" },
+            { name: "Beer", description: "500ml", price: 70, image: "img/drink5.jpg" },
+            { name: "Sunset Bliss", description: "350ml", price: 120, image: "img/drink6.jpg" },
+            { name: "Mojito", description: "350ml", price: 150, image: "img/drink7.jpg" },
+            { name: "Whiskey", description: "100ml", price: 50, image: "img/drink8.jpg" },
+            { name: "Juice", description: "orange, 1L", price: 50, image: "img/drink9.jpg" },
+            { name: "Water", description: "1L", price: 30, image: "img/drink10.jpg" },
+            { name: "Cola", description: "300ml", price: 20, image: "img/drink11.jpg" },
+            { name: "Tea", description: "250ml", price: 30, image: "img/drink12.jpg" }
         ],
 
         Milkshakes: [
-            { name: "~ Chocolate ~", description: "chocolate (300ml)", price: 80, image: "img/milkshake1.jpg" },
-            { name: "~ Vanilla ~", description: "vanilla (300ml)", price: 70, image: "img/milkshake2.jpg" },
-            { name: "~ Banana ~", description: "banana (300ml)", price: 60, image: "img/milkshake4.jpg" }
+            { name: "Chocolate", description: "chocolate (300ml)", price: 80, image: "img/milkshake1.jpg" },
+            { name: "Vanilla", description: "vanilla (300ml)", price: 70, image: "img/milkshake2.jpg" },
+            { name: "Banana", description: "banana (300ml)", price: 60, image: "img/milkshake3.jpg" }
         ],
     };
 
@@ -192,11 +192,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const productCard = document.createElement("div");
             productCard.classList.add("col-md-4");
             productCard.innerHTML = `
-            ${product.id === 1 ? '<span class="new-icon">New</span>' : ''}
-            ${product.id === 2 ? '<span class="new-icon">New</span>' : ''}
-            ${product.id === 3 ? '<span class="new-icon">New</span>' : ''}
-            ${product.id === 4 ? '<span class="pepper" title="Spicy"><img src="https://cdn-icons-png.flaticon.com/128/3813/3813064.png?uid=R77081381&ga=GA1.1.1848467976.1701626084&semt=ais"></span>' : ''}
-            ${product.id === 5 ? '<span class="vegan" title="Vegan"><img src="https://cdn-icons-png.flaticon.com/128/258/258566.png?uid=R77081381&ga=GA1.1.1848467976.1701626084&semt=ais"></span>' : ''}
+            ${product.id === 1 ? '<span class="pepper" title="Spicy"><img src="https://cdn-icons-png.flaticon.com/128/3813/3813064.png?uid=R77081381&ga=GA1.1.1848467976.1701626084&semt=ais"></span>' : ''}
+            ${product.id === 2 ? '<span class="vegan" title="Vegan"><img src="https://cdn-icons-png.flaticon.com/128/258/258566.png?uid=R77081381&ga=GA1.1.1848467976.1701626084&semt=ais"></span>' : ''}
 
                 <div class="product-card col-md-12">
                     <img src="${product.image}" alt="${product.name}" class="product-image img-fluid">
