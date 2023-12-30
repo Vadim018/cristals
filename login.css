@@ -19,9 +19,23 @@ video {
     z-index: -1;
 }
 
-.home img {
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home, .user {
+    display: flex;
+    align-items: center;
+}
+
+.home img, .user img {
     filter: invert(100%);
     width: 30px;
+}
+
+.home img {
+    width: 50px;
 }
 
 #loading-screen {
@@ -195,8 +209,23 @@ input:focus {
         height: 100px;
     }
 
-    .home img {
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .home, .user {
+        display: flex;
+        align-items: center;
+    }
+    
+    .home img, .user img {
+        filter: invert(100%);
         width: 30px;
+    }
+    
+    .home img {
+        width: 50px;
     }
 
     .avatar:hover {
