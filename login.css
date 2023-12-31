@@ -51,34 +51,18 @@ body {
     opacity: 0 !important;
 }
 
-.avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
-    transition: transform 0.5s ease-in-out;
-}
-
-.avatar:hover {
-    transform: scale(1.1);
-}
-
 .login-container {
     background-color: transparent;
     backdrop-filter: blur(50px);
     width: 450px;
     margin: 50px auto;
     padding: 20px;
-    border-top: 5px solid #007BFF;
-    border-left: 5px solid #007BFF;
-    border-bottom: 5px solid #e1ff00;
-    border-right: 5px solid #e1ff00;
+    border-top: 8px solid #151515;
+    border-left: 8px solid #151515;
+    border-bottom: 8px solid #00493e;
+    border-right: 8px solid #00493e;
     border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
 }
 
 .form-group {
@@ -176,6 +160,10 @@ input:focus {
 
 .git {
     filter: invert(100%);
+}
+
+hr {
+    border: 2px solid #fff;
 }
 
 @keyframes gradientBG {
