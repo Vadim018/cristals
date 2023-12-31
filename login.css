@@ -7,7 +7,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url("https://img.freepik.com/free-photo/green-gradient-abstract-background-empty-room-with-space-your-text-picture_1258-117939.jpg?w=1060&t=st=1704011602~exp=1704012202~hmac=9cfd2af9b23e2e5fce6a694033051b407434d0e8136b873803cd52fd50f6869b");
+    background-image: url("img/back1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
