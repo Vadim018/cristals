@@ -13,6 +13,10 @@ body {
     z-index: -1;
 }
 
+.home a:focus, .user a:focus, .input-group-text img:focus, .socials a:focus {
+    outline: none;
+}
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -25,11 +29,14 @@ body {
 
 .home img, .user img {
     filter: invert(100%);
-    width: 30px;
 }
 
 .home img {
-    width: 50px;
+    width: 40px;
+}
+
+.user img {
+    width: 30px;
 }
 
 #loading-screen {
@@ -104,6 +111,7 @@ input:focus {
 
 .input-group-text img {
     width: 20px;
+    cursor: pointer;
 }
 
 .form-group input {
@@ -203,11 +211,14 @@ hr {
     
     .home img, .user img {
         filter: invert(100%);
-        width: 30px;
     }
     
     .home img {
-        width: 50px;
+        width: 40px;
+    }
+    
+    .user img {
+        width: 30px;
     }
 
     .avatar:hover {

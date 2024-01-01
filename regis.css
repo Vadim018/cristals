@@ -137,3 +137,21 @@ input:focus {
 hr {
     border: 2px solid black; 
 }
+
+@media screen and (max-width: 720px) {
+    .regis {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        background-color: transparent;
+        border: none;
+        width: 100%;
+    }
+
+    .input-group-user {
+        flex-direction: column;
+        width: 100%;
+    }
+}

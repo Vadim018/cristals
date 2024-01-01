@@ -513,23 +513,27 @@ body,
     }
 
     header {
-        height: 350px;
+        height: 150px;
     }
 
     .buttons {
         margin: 0;
+        display: flex;
+        justify-content: space-around;
+        margin: 100px;
     }
 
     .buttons a {
         border: none;
         font-size: 18px;
+        padding: 0;
     }
 
     .buttons a:hover {
         color: transparent;
     }
 
-    .buttons, .buttons a, .lightbulb-container {
+    .lightbulb-container {
         display: block;
     }
 

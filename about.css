@@ -236,7 +236,7 @@ header {
 
 @media screen and (max-width: 720px) {
     header {
-        height: 350px;
+        height: 150px;
     }
 
     h2 {
@@ -245,13 +245,18 @@ header {
 
     .buttons {
         margin: 0;
+        display: flex;
+        justify-content: space-around;
+        margin: 100px;
     }
 
     .buttons a {
         border: none;
+        font-size: 18px;
+        padding: 0;
     }
 
-    .buttons, .buttons a, .lightbulb-container {
+    .lightbulb-container {
         display: block;
     }
 
