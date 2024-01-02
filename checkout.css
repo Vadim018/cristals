@@ -2,8 +2,8 @@ body {
   font-family: 'Playpen Sans', cursive;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #88C3EF, #EEF0CB);
-  background-size: 100% 200%;
+  background: linear-gradient(to bottom, #abcaff, #fffbb0, #fde383, #ffebb9);
+  background-size: 400% 400%;
 }
 
 .header-container {

@@ -66,8 +66,8 @@ body {
     padding: 20px;
     border-top: 8px solid #151515;
     border-left: 8px solid #151515;
-    border-bottom: 8px solid #00493e;
-    border-right: 8px solid #00493e;
+    border-bottom: 8px solid #00493E;
+    border-right: 8px solid #00493E;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
 }
@@ -138,7 +138,7 @@ input:focus {
     text-align: center;
     margin: auto;
     width: 100%;
-    background-color: #007BFF;
+    background-color: transparent;
     padding: 10px;
     border-radius: 5px;
     text-decoration: none;
@@ -148,7 +148,7 @@ input:focus {
 }
 
 .login-button a:hover {
-    background-color: #0050a6;
+    background-color: #007BFF;
 }
 
 .socials {

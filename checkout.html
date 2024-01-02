@@ -104,15 +104,11 @@
                     <h4 class="mb-3" id="pay">Payment</h4>
                     <div class="my-3">
                         <div class="form-check">
-                            <input id="check" name="paymentMethod" type="radio" class="form-check-input" checked>
-                            <label class="form-check-label" for="check">None</label>
-                        </div>
-                        <div class="form-check">
-                            <input id="cash" name="paymentMethod" type="radio" class="form-check-input" required="">
+                            <input id="cash" name="paymentMethod" type="radio" class="form-check-input" onclick="toggleRadio(this)" required="">
                             <label class="form-check-label" for="cash">Cash</label>
                         </div>
                         <div class="form-check">
-                            <input id="credit" name="paymentMethod" type="radio" class="form-check-input" required="" onchange="enableContinueButton()">
+                            <input id="credit" name="paymentMethod" type="radio" class="form-check-input" onclick="toggleRadio(this)" required="" onchange="enableContinueButton()">
                             <label class="form-check-label" for="credit">Card</label>
                         </div>
                     </div>

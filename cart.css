@@ -3,9 +3,8 @@ body {
     color: #fff;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #F5F19A, #F5E8A5, #EFF5AB);
+    background: linear-gradient(to bottom, #beddff, #ffee9b, #ffeb86);
     background-size: 400% 400%;
-    animation: gradientBG 5s infinite;
     overflow-x: hidden;
 }
 
@@ -120,18 +119,6 @@ p {
 .btn {
     position: relative;
     width: 30%;
-}
-
-@keyframes gradientBG {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
 }
 
 @media screen and (max-width: 720px) {

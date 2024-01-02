@@ -2,7 +2,7 @@ body {
     font-family: 'Playpen Sans', cursive;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #D4FAF7, #FAF5D7);
+    background: linear-gradient(to bottom, #D0FFFB, #FFF09B);
     background-size: 200% 200%;
 }
 
@@ -27,15 +27,10 @@ body {
 
 .main {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    margin: 20px;
-}
-
-.main a {
-    display: flex;
     align-items: center;
-    text-decoration: none;
+    text-align: center;
+    margin: 10px;
 }
 
 .main a p {
@@ -43,63 +38,56 @@ body {
     color: #000;
 }
 
-h1 {
-    color: #000;
+.main a {
+    text-decoration: none;
 }
 
 .regis {
-    width: 50%;
+    display: block;
+    justify-content: center;
+    align-items: center;
     margin: auto;
-    border: 1px solid #ccc;
+    width: 30%;
+    border: 2px solid #000;
     padding: 20px;
     border-radius: 10px;
-    background-color: #fff;
+    margin-bottom: 20px;
 }
 
 .input-group-user {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 .input-row {
-    display: inline-block;
-    width: 100%;  
-    margin: 10px; 
-}
-
-.label-row {
     display: flex;
-    justify-content: space-between;
-}
-
-.label-row label {
-    width: 50%;
+    flex-direction: column;
 }
 
 .input-row input {
     width: 100%;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 18px;
-    color: #000;
-}
-
-input {
-    width: 100%;
     padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
+    border: 1px solid #000;
     border-radius: 5px;
-    background-color: transparent;
-    color: #000;
-    font-size: 18px;
 }
 
 input:focus {
     outline: none;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 18px;
 }
 
 .password-input-container {
@@ -110,11 +98,25 @@ input:focus {
     position: absolute;
     top: 50%;
     right: 10px;
-    transform: translateY(-50%);
+    transform: translateY(-90%);
     cursor: pointer;
 }
 
-.btn-outline-secondary {
+.btn-a {
+    display: flex;
+    margin: auto;
+    font-size: 18px;
+    border: none;
+    background-color: transparent;
+    color: #555;
+}
+
+.btn-a:focus {
+    outline: none;
+}
+
+.btn-b {
+    color: #333;
     font-size: 18px;
     display: flex;
     justify-content: center;
@@ -125,33 +127,37 @@ input:focus {
     padding: 10px;
     border-radius: 50px;
     border: none;
-    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.5);
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.3);
     background-color: transparent;
     transition: background-color 0.5s ease;
 }
 
-.btn-outline-secondary:hover {
+.btn-b:hover {
     background-color: #A3A3A3;
+    color: #fff;
 }
 
-hr {
-    border: 2px solid black; 
+.btn-b:focus {
+    outline: none;
+}
+
+.line {
+    width: 100%;
+    border: 1px solid black;
 }
 
 @media screen and (max-width: 720px) {
     .regis {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        flex-direction: column;
-        background-color: transparent;
-        border: none;
-        width: 100%;
+        width: 95%;
+        margin: auto;
+        margin-bottom: 10px;
     }
 
-    .input-group-user {
-        flex-direction: column;
-        width: 100%;
+    .main a p {
+        font-size: 36px;
+    }
+
+    h1 {
+        font-size: 24px;
     }
 }

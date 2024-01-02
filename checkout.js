@@ -242,12 +242,7 @@ function validateForm() {
       selfPickupCheckbox.disabled = true;
       paymentMethodCash.disabled = true;
       paymentMethodCredit.disabled = true;
-      document.querySelectorAll('.not-selected').forEach(element => {
-        element.disabled = true;
-      });
-  
-      var notSelectedOption = document.getElementById('check');
-      notSelectedOption.disabled = true;
+      
 
       var continueBtn = document.getElementById('continueBtn');
       continueBtn.disabled = true;
@@ -427,34 +422,45 @@ function submitComment() {
   document.getElementById('orderComment').value = '';
 }
 
-function enableContinueButton() {
-  var notSelectedRadio = document.getElementById("check");
-  var selfPickupCheckbox = document.getElementById("selfPickup");
-
-  if (notSelectedRadio.checked) {
-      selfPickupCheckbox.disabled = false;
-  } else {
-      selfPickupCheckbox.disabled = true;
-  }
-}
-
 document.addEventListener("DOMContentLoaded", function () {
-  enableContinueButton();
-
   var cashRadio = document.getElementById("cash");
   var creditRadio = document.getElementById("credit");
-  var notSelectedRadio = document.getElementById("check");
+  var selfPickupCheckbox = document.getElementById("selfPickup");
+  var creditCardContent = document.querySelector(".content");
 
-  cashRadio.addEventListener("change", enableContinueButton);
-  creditRadio.addEventListener("change", enableContinueButton);
-  notSelectedRadio.addEventListener("change", enableContinueButton);
+  function updateSelfPickupState() {
+      selfPickupCheckbox.disabled = cashRadio.checked || creditRadio.checked;
+  }
+
+  function toggleCreditCardContent() {
+      creditCardContent.style.display = creditRadio.checked ? "block" : "none";
+  }
+
+  [cashRadio, creditRadio].forEach(function (radio) {
+      radio.addEventListener("change", function () {
+          updateSelfPickupState();
+          toggleCreditCardContent();
+      });
+  });
+
+  window.toggleRadio = function(button) {
+      if (button === lastChecked) {
+          button.checked = false;
+          lastChecked = null;
+      } else {
+          lastChecked = button;
+      }
+      updateSelfPickupState();
+      toggleCreditCardContent();
+  }
+  updateSelfPickupState();
+  toggleCreditCardContent();
 });
 
 function togglePaymentOptionsVisibility() {
   var selfPickupCheckbox = document.getElementById('selfPickup');
   var paymentMethodCash = document.getElementById('cash');
   var paymentMethodCredit = document.getElementById('credit');
-  var notSelectedRadio = document.getElementById('check');
   var firstName = document.getElementById('firstName');
   var phone = document.getElementById('phone');
   var address = document.getElementById('address');
@@ -469,14 +475,12 @@ function togglePaymentOptionsVisibility() {
   if (isUserDetailsEntered) {
     paymentMethodCash.parentElement.style.display = 'block';
     paymentMethodCredit.parentElement.style.display = 'block';
-    notSelectedRadio.parentElement.style.display = 'block';
     selfPickupCheckbox.parentElement.style.display = 'block';
     pay.style.display = 'block';
     hr.style.display = 'block';
   } else {
     paymentMethodCash.parentElement.style.display = 'none';
     paymentMethodCredit.parentElement.style.display = 'none';
-    notSelectedRadio.parentElement.style.display = 'none';
     selfPickupCheckbox.parentElement.style.display = 'none';
     pay.style.display = 'none';
     hr.style.display = 'none';
@@ -487,7 +491,6 @@ var inputFields = document.querySelectorAll('#firstName, #phone, #address, #emai
 inputFields.forEach(function (inputField) {
   inputField.addEventListener('input', togglePaymentOptionsVisibility);
 });
-
 togglePaymentOptionsVisibility();
 
 document.getElementById('toggle-cvv').addEventListener('click', function () {
@@ -502,3 +505,13 @@ document.getElementById('toggle-cvv').addEventListener('click', function () {
       cvvIcon.textContent = '👁️';
   }
 });
+
+let lastChecked;
+function toggleRadio(button) {
+    if (button === lastChecked) {
+        button.checked = false;
+        lastChecked = null;
+    } else {
+        lastChecked = button;
+    }
+}
