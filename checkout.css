@@ -23,11 +23,10 @@ h2 {
 }
 
 #main-container {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  margin: 0 auto;
-  transform: translate(0, 0);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
   background-color: #fff;
   display: flex;

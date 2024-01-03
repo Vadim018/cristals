@@ -44,7 +44,7 @@ if (
 }
 
 if (!nameInput.value || !addressInput.value || !phoneInput.value || !emailInput.value || !usernameInput.value || !passwordInput.value) {
-    alert('Please enter no more than 50 characters in each field!');
+    alert('Please fill all fields!');
     return;
 }
 
