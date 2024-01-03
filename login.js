@@ -15,9 +15,9 @@ function validateLogin() {
     alert('Please fill in all fields!');
   } else {
     alert('Successful!');
-    setTimeout(function () {
-      window.location.href = 'index.html';
-    }, 3000);
+    setTimeout(function() {
+      window.location.href = "index.html";
+  }, 1000);
   }
 }
 

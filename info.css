@@ -473,6 +473,11 @@ body,
 
 .social img {
     width: 50px;
+    transition: transform 1s ease;
+}
+
+.social img:hover {
+    transform: scale(1.2) rotateY(360deg);
 }
 
 .copyright {
@@ -629,6 +634,10 @@ body,
 
     .social img {
         width: 30px;
+    }
+
+    .social img:hover {
+        transform: none;
     }
 
     .copyright {
