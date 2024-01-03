@@ -21,6 +21,22 @@ function validateLogin() {
   }
 }
 
+const passwordInput = document.getElementById('password');
+const togglePasswordButton = document.getElementById('togglePassword');
+const lockIcon = 'https://cdn-icons-png.flaticon.com/128/25/25239.png';
+const unlockIcon = 'https://cdn-icons-png.flaticon.com/128/25/25215.png';
+let isPasswordVisible = false;
+
+togglePasswordButton.addEventListener('click', function () {
+  isPasswordVisible = !isPasswordVisible;
+
+  const type = isPasswordVisible ? 'text' : 'password';
+  passwordInput.setAttribute('type', type);
+
+  const iconSrc = isPasswordVisible ? unlockIcon : lockIcon;
+  togglePasswordButton.innerHTML = `<img src="${iconSrc}" alt="Toggle Password">`;
+});
+
 setTimeout(function () {
   document.getElementById("loading-screen").style.opacity = 0;
   setTimeout(function () {
@@ -36,20 +52,4 @@ document.addEventListener("click", function (event) {
       window.location.href = event.target.href;
     }, 0);
   }
-});
-
-const passwordInput = document.getElementById('password');
-const togglePasswordButton = document.getElementById('togglePassword');
-const lockIcon = 'https://cdn-icons-png.flaticon.com/128/25/25239.png';
-const unlockIcon = 'https://cdn-icons-png.flaticon.com/128/25/25215.png';
-let isPasswordVisible = false;
-
-togglePasswordButton.addEventListener('click', function () {
-  isPasswordVisible = !isPasswordVisible;
-
-  const type = isPasswordVisible ? 'text' : 'password';
-  passwordInput.setAttribute('type', type);
-
-  const iconSrc = isPasswordVisible ? unlockIcon : lockIcon;
-  togglePasswordButton.innerHTML = `<img src="${iconSrc}" alt="Toggle Password">`;
 });
