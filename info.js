@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const currentTime = timestamp - startTime;
             const scrollProgress = Math.min(currentTime / scrollDuration, 1);
             const easeInOutProgress = easeInOutQuad(scrollProgress);
+            
             window.scrollTo(0, startScrollTop * (1 - easeInOutProgress));
             if (currentTime < scrollDuration) {
                 requestAnimationFrame(scrollStep);
@@ -38,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const buttons = document.querySelectorAll(".btn-group-menu");
     const icons = document.querySelectorAll(".icon");
+
     buttons.forEach((button, index) => {
         button.addEventListener("mouseover", () => {
             icons[index].style.display = "inline-block";
@@ -57,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    var ang = 0;
+    let ang = 0;
 
     $("#prev").click(function () {
         ang = ang + 22.5;
@@ -75,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const detailsPopup = document.querySelector(".details-popup");
     const detailsInfo = document.querySelectorAll(".details-info");
     const closeButton = detailsPopup.querySelector(".close-button");
+
     showDetailsLinks.forEach(link => {
         link.addEventListener("click", function (e) {
             e.preventDefault();

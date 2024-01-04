@@ -1,3 +1,5 @@
+/*  */
+
 setTimeout(function () {
     document.getElementById("loading-screen").style.opacity = 0;
     setTimeout(function () {

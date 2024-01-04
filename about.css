@@ -7,7 +7,7 @@ body {
 }
 
 #loading-screen {
-    background-color: #fff;
+    background-color: #FFF;
     z-index: 99999;
     transition: opacity 0.5s ease-in-out;
     justify-content: center;
@@ -28,7 +28,7 @@ body {
 }
 
 body, .dark-background .card-text, .dark-background h2, #backToTopBtn {
-    color: #fff;
+    color: #FFF;
 }
 
 body {
@@ -224,7 +224,7 @@ header {
 }
 
 .dark-background .copyright {
-    color: #fff;
+    color: #FFF;
 }
 
 @keyframes gradientBG {

@@ -1,9 +1,9 @@
 body {
     font-family: 'Playpen Sans', cursive;
-    color: #fff;
+    color: #FFF;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #beddff, #ffee9b, #ffeb86);
+    background: linear-gradient(to bottom, #BEDDFF, #FFEE9B, #FFEB86);
     background-size: 400% 400%;
     overflow-x: hidden;
 }
@@ -14,7 +14,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    background-color: #FFF;
     z-index: 99999;
     display: flex;
     justify-content: center;
@@ -76,7 +76,7 @@ p {
 }
 
 #cart-items {
-    background-color: #fff;
+    background-color: #FFF;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: opacity 0.3s ease;
 }

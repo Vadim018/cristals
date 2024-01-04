@@ -37,7 +37,7 @@ body {
 }
 
 .contact-info p {
-    color: #fff;
+    color: #FFF;
     font-size: 24px;
     margin: 20px;
 }
@@ -58,7 +58,7 @@ body {
 }
 
 #loading-screen {
-    background-color: #fff;
+    background-color: #FFF;
     z-index: 99999;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
@@ -68,17 +68,11 @@ body {
     opacity: 0 !important;
 }
 
-body,
-.dark-background h1,
-.dark-background .card-title,
-.dark-background .condition ul li,
-.close-button,
-#backToTopBtn {
-    color: #fff;
+body, .dark-background h1, .dark-background .card-title, .dark-background .condition ul li, .close-button, #backToTopBtn {
+    color: #FFF;
 }
 
-body,
-#backToTopBtn {
+body, #backToTopBtn {
     padding: 0;
 }
 
@@ -87,19 +81,11 @@ h1 {
     margin: 50px;
 }
 
-h1,
-.condition h2,
-.opening-hours-item span,
-.card-title {
+h1, .condition h2, .opening-hours-item span, .card-title {
     color: #333;
 }
 
-h1,
-.condition,
-.opening-hours,
-.opening-hours-item,
-.card-title,
-.details-info {
+h1, .condition, .opening-hours, .opening-hours-item, .card-title, .details-info {
     text-align: center;
 }
 
@@ -108,8 +94,7 @@ header {
     height: 300px;
 }
 
-.navbar,
-.details-button a {
+.navbar, .details-button a {
     padding: 10px;
 }
 
@@ -136,26 +121,15 @@ header {
     z-index: 1;
 }
 
-.dark-background,
-.card-img-top,
-.details-popup,
-.details-content,
-#loading-screen {
+.dark-background, .card-img-top, .details-popup, .details-content, #loading-screen {
     width: 100%;
 }
 
-body,
-.dark-background,
-.details-popup,
-.details-content,
-#loading-screen {
+body, .dark-background, .details-popup, .details-content, #loading-screen {
     height: 100%;
 }
 
-.lightbulb img,
-.dark-background,
-.details-button a,
-.close-button {
+.lightbulb img, .dark-background, .details-button a, .close-button {
     position: absolute;
 }
 
@@ -167,23 +141,15 @@ body,
     width: 70px;
 }
 
-.lightbulb img,
-.close-button,
-.icon img,
-#backToTopBtn {
+.lightbulb img, .close-button,.icon img, #backToTopBtn {
     cursor: pointer;
 }
 
-.dark-background,
-.details-popup,
-.close-button,
-#loading-screen {
+.dark-background, .details-popup, .close-button, #loading-screen {
     top: 0;
 }
 
-.dark-background,
-.details-popup,
-#loading-screen {
+.dark-background, .details-popup, #loading-screen {
     left: 0;
 }
 
@@ -201,60 +167,42 @@ body,
     border-bottom-color: #00AAFF;
 }
 
-.buttons,
-.del-pay-section,
-.condition,
-.opening-hours-wrapper,
-.details-content,
-#loading-screen {
+.buttons, .del-pay-section, .condition, .opening-hours-wrapper, .details-content, #loading-screen {
     display: flex;
 }
 
-.buttons,
-.condition,
-.details-content,
-#loading-screen {
+.buttons, .condition, .details-content, #loading-screen {
     align-items: center;
 }
 
-.buttons,
-.opening-hours-grid {
+.buttons, .opening-hours-grid {
     gap: 50px;
 }
 
-.buttons a,
-.details-button a {
+.buttons a, .details-button a {
     text-decoration: none;
 }
 
-.buttons a,
-.dark-background .condition ul li span,
-.dark-background .condition ul li .span2 {
+.buttons a, .dark-background .condition ul li span, .dark-background .condition ul li .span2 {
     background: #74EEFE;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
 
-.buttons a,
-.details-info {
+.buttons a, .details-info {
     padding: 20px;
 }
 
-.buttons a,
-.opening-hours-item,
-.details-button a,
-.card-title {
+.buttons a, .opening-hours-item, .details-button a, .card-title {
     font-size: 24px;
 }
 
-.buttons a,
-.details-button a {
+.buttons a, .details-button a {
     transition: color 0.3s;
 }
 
-.dark-background .condition h2,
-.condition {
+.dark-background .condition h2, .condition {
     color: #000;
 }
 
@@ -262,8 +210,7 @@ body,
     color: #999;
 }
 
-.dark-background .delivery-payment-wrapper,
-.dark-background .opening-hours-item span {
+.dark-background .delivery-payment-wrapper, .dark-background .opening-hours-item span {
     color: #B5DCF0;
 }
 
@@ -291,9 +238,7 @@ body,
     text-align: left;
 }
 
-.condition ul li span,
-.span2,
-.price {
+.condition ul li span, .span2, .price {
     color: #FF0000;
     font-weight: bold;
 }
@@ -323,8 +268,7 @@ body,
     width: 50px;
 }
 
-.icon,
-.card {
+.icon, .card {
     margin-bottom: 20px;
 }
 
@@ -332,9 +276,7 @@ body,
     margin-top: 50px;
 }
 
-.opening-hours-wrapper,
-.details-content,
-#loading-screen {
+.opening-hours-wrapper, .details-content, #loading-screen {
     justify-content: center;
 }
 
@@ -353,8 +295,7 @@ body,
     margin-bottom: 5px;
 }
 
-.opening-hours-item span,
-.details-info.active {
+.opening-hours-item span, .details-info.active {
     display: block;
 }
 
@@ -366,24 +307,19 @@ body,
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
-.card,
-.details-content {
+.card, .details-content {
     position: relative;
 }
 
-.card,
-.close-button,
-#backToTopBtn {
+.card, .close-button, #backToTopBtn {
     border: none;
 }
 
-.card,
-#backToTopBtn {
+.card, #backToTopBtn {
     background: transparent;
 }
 
-.card,
-.details-info {
+.card, .details-info {
     border-radius: 5px;
 }
 
@@ -423,15 +359,11 @@ body,
     z-index: 1000;
 }
 
-.details-popup,
-.details-info,
-#backToTopBtn {
+.details-popup, .details-info, #backToTopBtn {
     display: none;
 }
 
-.details-popup,
-#backToTopBtn,
-#loading-screen {
+.details-popup, #backToTopBtn, #loading-screen {
     position: fixed;
 }
 
@@ -441,8 +373,7 @@ body,
     background: none;
 }
 
-.close-button,
-#backToTopBtn {
+.close-button, #backToTopBtn {
     outline: none;
 }
 
@@ -496,7 +427,7 @@ body,
 }
 
 .dark-background .copyright {
-    color: #fff;
+    color: #FFF;
 }
 
 @keyframes gradientBG {

@@ -215,6 +215,7 @@ function setInitialState() {
       body.classList.remove('dark-background');
     }
 }
+
 document.addEventListener('DOMContentLoaded', setInitialState);
 
 lightbulbContainer.addEventListener('mouseenter', () => {

@@ -40,6 +40,7 @@ window.addEventListener('load', handleScrollUp);
 
 document.addEventListener("DOMContentLoaded", function () {
   const backToTopBtn = document.getElementById("backToTopBtn");
+  
   backToTopBtn.addEventListener("click", function () {
     scrollToTopWithEasing();
   });
@@ -53,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const currentTime = timestamp - startTime;
       const scrollProgress = Math.min(currentTime / scrollDuration, 1);
       const easeInOutProgress = easeInOutQuad(scrollProgress);
+      
       window.scrollTo(0, startScrollTop * (1 - easeInOutProgress));
       if (currentTime < scrollDuration) {
         requestAnimationFrame(scrollStep);
@@ -75,10 +77,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const buttons = document.querySelectorAll(".btn-group-menu");
   const icons = document.querySelectorAll(".icon");
+
   buttons.forEach((button, index) => {
     button.addEventListener("mouseover", () => {
       icons[index].style.display = "inline-block";
     });
+
     button.addEventListener("mouseout", () => {
       icons[index].style.display = "none";
     });
@@ -154,6 +158,7 @@ function toggleLightbulb() {
     } else {
         turnOffLight();
     }
+
     setTimeout(() => {
       audioElement.play();
     }, 0);

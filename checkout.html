@@ -64,33 +64,25 @@
                         <div class="col-12 mb-3">
                             <label for="firstName" class="form-label">First name</label>
                             <input type="text" class="form-control" id="firstName" placeholder="Ivan Filter" value="" maxlength="50" required>
-                            <div class="invalid-feedback">
-                                Please enter your name!
-                            </div>
+                            <div class="invalid-feedback">Please enter your name!</div>
                         </div>
                         <div class="col-12 mb-3">
                             <label for="phone" class="form-label">Phone</label>
                             <div class="input-group has-validation">
                                 <span class="input-group-text">🇺🇦 +38</span>
                                 <input type="tel" class="form-control" id="phone" placeholder="067-321-23-21" maxlength="13" required>
-                                <div class="invalid-feedback">
-                                    Please enter your phone!
-                                </div>
+                                <div class="invalid-feedback">Please enter your phone!</div>
                             </div>
                         </div>
                         <div class="col-12 mb-3">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-control" id="email" placeholder="nodeJS@gmail.com" maxlength="50" required>
-                            <div class="invalid-feedback">
-                                Please enter your email!
-                            </div>
+                            <div class="invalid-feedback">Please enter your email!</div>
                         </div>
                         <div class="col-12 mb-3">
                             <label for="address" class="form-label">Address</label>
                             <input type="text" class="form-control" id="address" placeholder="Kyiv Street, build 13" maxlength="50" required>
-                            <div class="invalid-feedback">
-                                Please enter your address!
-                            </div>
+                            <div class="invalid-feedback">Please enter your address!</div>
                         </div>
                     </div>
                     <div id="notificationContainer"></div>
@@ -118,22 +110,14 @@
                                 <div class="col-md-6">
                                     <label for="cc-number" class="form-label">Card number</label>
                                     <input type="text" class="form-control" id="cc-number" placeholder="**** **** **** ****" required>
-                                    <div class="invalid-feedback" id="cc-number-error">
-                                        Credit card number is required!
-                                    </div>
-                                    <div class="valid-feedback" id="cc-number-success">
-                                        &#10004; Valid
-                                    </div>
+                                    <div class="invalid-feedback" id="cc-number-error">Credit card number is required!</div>
+                                    <div class="valid-feedback" id="cc-number-success">&#10004; Valid</div>
                                 </div>
                                 <div class="col-md-3">
                                     <label for="cc-expiration" class="form-label">Expiration</label>
                                     <input type="text" class="form-control" id="cc-expiration" placeholder="mm/yy" required>
-                                    <div class="invalid-feedback" id="cc-expiration-error">
-                                        Expiration date is required!
-                                    </div>
-                                    <div class="valid-feedback" id="cc-expiration-success">
-                                        &#10004; Valid
-                                    </div>
+                                    <div class="invalid-feedback" id="cc-expiration-error">Expiration date is required!</div>
+                                    <div class="valid-feedback" id="cc-expiration-success">&#10004; Valid</div>
                                 </div>
                                 <div class="col-md-3">
                                     <label for="cc-cvv" class="form-label">CVV</label>
@@ -145,12 +129,8 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <div class="invalid-feedback" id="cc-cvv-error">
-                                        Security code is required!
-                                    </div>
-                                    <div class="valid-feedback" id="cc-cvv-success">
-                                        &#10004; Valid
-                                    </div>
+                                    <div class="invalid-feedback" id="cc-cvv-error">Security code is required!</div>
+                                    <div class="valid-feedback" id="cc-cvv-success">&#10004; Valid</div>
                                 </div>
                                 <button type="button" onclick="validateCreditCard()" class="btn btn-primary m-3" id="submitBtn">Submit</button>
                             </div>
@@ -164,13 +144,13 @@
     </div>
 </main>
 <br>
-<div id="main-container" style="display: none;">
+<div id="main-container">
     <div id="loader-container">
         <div id="loader"></div>
         <img src="https://cdn-icons-png.flaticon.com/128/1710/1710008.png" id="successIcon">
         <p class="pay-p">Payment successful</p>
     </div>
-    <button class="btn1" id="okButton">Ok</button>
+    <button class="btn1" id="okButton">Okay</button>
 </div>
 <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

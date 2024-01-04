@@ -81,17 +81,17 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("cartUpdated", updateBadge);
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  var cashRadio = document.getElementById("cash");
-  var creditRadio = document.getElementById("credit");
-  var cardFields = document.querySelector(".row.gy-3");
+document.addEventListener("DOMContentLoaded", function () {
+  let cashRadio = document.getElementById("cash");
+  let creditRadio = document.getElementById("credit");
+  let cardFields = document.querySelector(".row.gy-3");
 
   function toggleCardFields() {
-    if (creditRadio.checked) {
-      cardFields.style.display = "flex";
-    } else {
-      cardFields.style.display = "none";
-    }
+      if (creditRadio.checked) {
+          cardFields.style.display = "flex";
+      } else {
+          cardFields.style.display = "none";
+      }
   }
   cashRadio.addEventListener("change", toggleCardFields);
   creditRadio.addEventListener("change", toggleCardFields);
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.getElementById('phone').addEventListener('input', function (e) {
-  var inputValue = e.target.value.replace(/\D/g, '');
+  let inputValue = e.target.value.replace(/\D/g, '');
 
   if (inputValue.length > 0 && inputValue.charAt(0) !== '0') {
       inputValue = '0' + inputValue.slice(0, 9);
@@ -109,16 +109,17 @@ document.getElementById('phone').addEventListener('input', function (e) {
       inputValue = inputValue.slice(0, 10);
   }
 
-  var formattedValue = inputValue.replace(/(\d{3})(\d{3})(\d{2})(\d{2})/, '$1-$2-$3-$4');
+  let formattedValue = inputValue.replace(/(\d{3})(\d{3})(\d{2})(\d{2})/, '$1-$2-$3-$4');
   e.target.value = formattedValue;
 });
 
-$(document).ready(function() {
-  $('#cc-number').on('input', function(event) {
+$(document).ready(function () {
+  $('#cc-number').on('input', function (event) {
 
       if (event.originalEvent.inputType === 'deleteContentBackward') {
           return;
       }
+
       let cardNumber = $(this).val().replace(/\D/g, '');
       cardNumber = cardNumber.replace(/(\d{4})/g, '$1 ');
 
@@ -131,156 +132,158 @@ $(document).ready(function() {
 });
 
 document.getElementById('cc-expiration').addEventListener('input', function (e) {
-    if (e.inputType === 'deleteContentBackward') {
-        return;
-    }
-    let input = e.target.value.replace(/[^\d/]/g, '');
-    let parts = input.split('/');
+  if (e.inputType === 'deleteContentBackward') {
+      return;
+  }
 
-    if (parts[0] && parts[0].length > 1 && parts[0][0] === '0' && parseInt(parts[0]) > 9) {
-        parts[0] = parts[0][1];
-    }
+  let input = e.target.value.replace(/[^\d/]/g, '');
+  let parts = input.split('/');
 
-    if (parts[0] === '00') {
-        parts[0] = '01';
-    }
+  if (parts[0] && parts[0].length > 1 && parts[0][0] === '0' && parseInt(parts[0]) > 9) {
+      parts[0] = parts[0][1];
+  }
 
-    if (parts[0] && parseInt(parts[0]) > 12) {
-        parts[0] = '12';
-    }
+  if (parts[0] === '00') {
+      parts[0] = '01';
+  }
 
-    if (parts[1]) {
-        parts[1] = parts[1].slice(0, 2);
-    } else {
-        parts[1] = '';
-    }
-    input = parts[0] + (parts[1] ? '/' + parts[1] : '');
+  if (parts[0] && parseInt(parts[0]) > 12) {
+      parts[0] = '12';
+  }
 
-    if (parts[0] && parts[0].length >= 2 && !input.includes('/')) {
-        input = parts[0].slice(0, 2) + '/' + parts[1];
-    }
-    e.target.value = input;
+  if (parts[1]) {
+      parts[1] = parts[1].slice(0, 2);
+  } else {
+      parts[1] = '';
+  }
+
+  input = parts[0] + (parts[1] ? '/' + parts[1] : '');
+
+  if (parts[0] && parts[0].length >= 2 && !input.includes('/')) {
+      input = parts[0].slice(0, 2) + '/' + parts[1];
+  }
+
+  e.target.value = input;
 });
 
-document.getElementById('cc-cvv').addEventListener('input', function(event) {
+document.getElementById('cc-cvv').addEventListener('input', function (event) {
   let inputValue = event.target.value.replace(/\D/g, '');
   inputValue = inputValue.slice(0, 3);
   event.target.value = inputValue;
 });
 
-var paymentMade = false;
+let paymentMade = false;
 
 function validateForm() {
   document.querySelectorAll('.is-invalid, .is-valid').forEach(element => {
-    element.classList.remove('is-invalid', 'is-valid');
+      element.classList.remove('is-invalid', 'is-valid');
   });
 
-  var selfPickupCheckbox = document.getElementById('selfPickup');
-  var firstName = document.getElementById('firstName');
-  var phone = document.getElementById('phone');
-  var address = document.getElementById('address');
-  var email = document.getElementById('email');
-  var paymentMethodCash = document.getElementById('cash');
-  var paymentMethodCredit = document.getElementById('credit');
-  var ccNumber = document.getElementById('cc-number');
-  var ccExpiration = document.getElementById('cc-expiration');
-  var ccCvv = document.getElementById('cc-cvv');
-  var isValid = true;
+  let selfPickupCheckbox = document.getElementById('selfPickup');
+  let firstName = document.getElementById('firstName');
+  let phone = document.getElementById('phone');
+  let address = document.getElementById('address');
+  let email = document.getElementById('email');
+  let paymentMethodCash = document.getElementById('cash');
+  let paymentMethodCredit = document.getElementById('credit');
+  let ccNumber = document.getElementById('cc-number');
+  let ccExpiration = document.getElementById('cc-expiration');
+  let ccCvv = document.getElementById('cc-cvv');
+  let isValid = true;
 
   if (!firstName.value.trim()) {
-    isValid = false;
-    firstName.classList.add('is-invalid');
+      isValid = false;
+      firstName.classList.add('is-invalid');
   } else {
-    firstName.classList.add('is-valid');
+      firstName.classList.add('is-valid');
   }
 
   if (!phone.value.trim()) {
-    isValid = false;
-    phone.classList.add('is-invalid');
+      isValid = false;
+      phone.classList.add('is-invalid');
   } else {
-    phone.classList.add('is-valid');
+      phone.classList.add('is-valid');
   }
 
   if (!email.value.trim()) {
-    isValid = false;
-    email.classList.add('is-invalid');
+      isValid = false;
+      email.classList.add('is-invalid');
   } else {
-    email.classList.add('is-valid');
+      email.classList.add('is-valid');
   }
 
   if (!address.value.trim()) {
-    isValid = false;
-    address.classList.add('is-invalid');
+      isValid = false;
+      address.classList.add('is-invalid');
   } else {
-    address.classList.add('is-valid');
+      address.classList.add('is-valid');
   }
 
-  var isValidCreditCard = true;
+  let isValidCreditCard = true;
 
   if (!selfPickupCheckbox.checked) {
-    if (!paymentMethodCash.checked && !paymentMethodCredit.checked) {
-      isValid = false;
-      paymentMethodCash.classList.add('is-invalid');
-      paymentMethodCredit.classList.add('is-invalid');
-    } else {
-      paymentMethodCash.classList.add('is-valid');
-      paymentMethodCredit.classList.add('is-valid');
-      if (paymentMethodCredit.checked) {
-        isValidCreditCard = validateCreditCard();
+      if (!paymentMethodCash.checked && !paymentMethodCredit.checked) {
+          isValid = false;
+          paymentMethodCash.classList.add('is-invalid');
+          paymentMethodCredit.classList.add('is-invalid');
+      } else {
+          paymentMethodCash.classList.add('is-valid');
+          paymentMethodCredit.classList.add('is-valid');
+          if (paymentMethodCredit.checked) {
+              isValidCreditCard = validateCreditCard();
+          }
       }
-    }
   }
 
   if (isValid && isValidCreditCard && !paymentMade) {
-    if (paymentMethodCash.checked || selfPickupCheckbox.checked) {
-      alert('Order processed successfully!');
-      window.location.href = 'index.html';
-    } else if (paymentMethodCredit.checked) {
-      ccNumber.disabled = true;
-      ccExpiration.disabled = true;
-      ccCvv.disabled = true;
-      selfPickupCheckbox.disabled = true;
-      paymentMethodCash.disabled = true;
-      paymentMethodCredit.disabled = true;
-      
+      if (paymentMethodCash.checked || selfPickupCheckbox.checked) {
+          alert('Order processed successfully!');
+          window.location.href = 'index.html';
+      } else if (paymentMethodCredit.checked) {
+          ccNumber.disabled = true;
+          ccExpiration.disabled = true;
+          ccCvv.disabled = true;
+          selfPickupCheckbox.disabled = true;
+          paymentMethodCash.disabled = true;
+          paymentMethodCredit.disabled = true;
 
-      var continueBtn = document.getElementById('continueBtn');
-      continueBtn.disabled = true;
-  
-      var mainContainer = document.getElementById('main-container');
-      mainContainer.style.display = 'flex';
+          let continueBtn = document.getElementById('continueBtn');
+          continueBtn.disabled = true;
 
-      var loader = document.getElementById('loader');
-      loader.style.display = 'flex';
+          let mainContainer = document.getElementById('main-container');
+          mainContainer.style.display = 'flex';
 
-      var successIcon = document.getElementById('successIcon');
-      successIcon.style.display = 'none';
+          let loader = document.getElementById('loader');
+          loader.style.display = 'flex';
 
-      displaySuccessMessage();
-      paymentMade = true;
-    }
+          let successIcon = document.getElementById('successIcon');
+          successIcon.style.display = 'none';
+
+          displaySuccessMessage();
+          paymentMade = true;
+      }
   }
 }
 
 function displaySuccessMessage() {
   setTimeout(function () {
-    loader.style.display = 'none';
+      loader.style.display = 'none';
 
-    successIcon.style.display = 'flex';
+      successIcon.style.display = 'flex';
 
-    var payP = document.querySelector('.pay-p');
-    payP.style.display = 'flex';
+      let payP = document.querySelector('.pay-p');
+      payP.style.display = 'flex';
 
-    var okButton = document.getElementById('okButton');
-    okButton.style.display = 'block';
+      let okButton = document.getElementById('okButton');
+      okButton.style.display = 'block';
 
-    okButton.addEventListener('click', function () {
-      window.location.href = 'index.html';
-    });
+      okButton.addEventListener('click', function () {
+          window.location.href = 'index.html';
+      });
 
-    var continueBtn = document.getElementById('continueBtn');
-    continueBtn.disabled = true;
-    paymentMade = true;
+      let continueBtn = document.getElementById('continueBtn');
+      continueBtn.disabled = true;
+      paymentMade = true;
 
   }, 5000);
 }
@@ -310,9 +313,9 @@ function validateCreditCard() {
   document.getElementById('cc-expiration-success').style.display = 'none';
   document.getElementById('cc-cvv-success').style.display = 'none';
 
-  var ccNumber = document.getElementById('cc-number').value.replace(/\s/g, '');
-  var ccExpiration = document.getElementById('cc-expiration').value;
-  var ccCvv = document.getElementById('cc-cvv').value;
+  let ccNumber = document.getElementById('cc-number').value.replace(/\s/g, '');
+  let ccExpiration = document.getElementById('cc-expiration').value;
+  let ccCvv = document.getElementById('cc-cvv').value;
 
   if (!/^\d{16}$/.test(ccNumber)) {
     document.getElementById('cc-number-error').style.display = 'block';
@@ -344,7 +347,7 @@ function validateCreditCard() {
   return true;
 }
 
-var firstName = document.getElementById('firstName');
+let firstName = document.getElementById('firstName');
 firstName.addEventListener('input', function () {
   firstName.classList.remove('is-invalid', 'is-valid');
   if (!firstName.value.trim()) {
@@ -354,7 +357,7 @@ firstName.addEventListener('input', function () {
   }
 });
 
-var phone = document.getElementById('phone');
+let phone = document.getElementById('phone');
 phone.addEventListener('input', function () {
   phone.classList.remove('is-invalid', 'is-valid');
   if (!phone.value.trim()) {
@@ -364,7 +367,7 @@ phone.addEventListener('input', function () {
   }
 });
 
-var email = document.getElementById('email');
+let email = document.getElementById('email');
 email.addEventListener('input', function () {
   email.classList.remove('is-invalid', 'is-valid');
   if (!email.value.trim()) {
@@ -374,7 +377,7 @@ email.addEventListener('input', function () {
   }
 });
 
-var address = document.getElementById('address');
+let address = document.getElementById('address');
 address.addEventListener('input', function () {
   address.classList.remove('is-invalid', 'is-valid');
   if (!address.value.trim()) {
@@ -385,13 +388,13 @@ address.addEventListener('input', function () {
 });
 
 function updateDeliveryCost() {
-  var selfPickupCheckbox = document.getElementById('selfPickup');
-  var continueBtn = document.getElementById('continueBtn');
-  var paymentMethodRadios = document.getElementsByName('paymentMethod');
-  var notificationContainer = document.getElementById('notificationContainer');
+  let selfPickupCheckbox = document.getElementById('selfPickup');
+  let continueBtn = document.getElementById('continueBtn');
+  let paymentMethodRadios = document.getElementsByName('paymentMethod');
+  let notificationContainer = document.getElementById('notificationContainer');
 
   if (selfPickupCheckbox.checked) {
-      for (var i = 0; i < paymentMethodRadios.length; i++) {
+      for (let i = 0; i < paymentMethodRadios.length; i++) {
           paymentMethodRadios[i].disabled = true;
       }
       notificationContainer.innerHTML = `
@@ -400,7 +403,7 @@ function updateDeliveryCost() {
         is carried out from our restaurant and there you can already pay in any convenient way for you!
       </div>`;
   } else {
-      for (var i = 0; i < paymentMethodRadios.length; i++) {
+      for (let i = 0; i < paymentMethodRadios.length; i++) {
           paymentMethodRadios[i].disabled = false;
       }
       notificationContainer.innerHTML = '';
@@ -423,10 +426,10 @@ function submitComment() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  var cashRadio = document.getElementById("cash");
-  var creditRadio = document.getElementById("credit");
-  var selfPickupCheckbox = document.getElementById("selfPickup");
-  var creditCardContent = document.querySelector(".content");
+  let cashRadio = document.getElementById("cash");
+  let creditRadio = document.getElementById("credit");
+  let selfPickupCheckbox = document.getElementById("selfPickup");
+  let creditCardContent = document.querySelector(".content");
 
   function updateSelfPickupState() {
       selfPickupCheckbox.disabled = cashRadio.checked || creditRadio.checked;
@@ -458,16 +461,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function togglePaymentOptionsVisibility() {
-  var selfPickupCheckbox = document.getElementById('selfPickup');
-  var paymentMethodCash = document.getElementById('cash');
-  var paymentMethodCredit = document.getElementById('credit');
-  var firstName = document.getElementById('firstName');
-  var phone = document.getElementById('phone');
-  var address = document.getElementById('address');
-  var email = document.getElementById('email');
-  var pay = document.getElementById('pay');
-  var hr = document.getElementById('hr');
-  var isUserDetailsEntered = firstName.value.trim() !== '' &&
+  let selfPickupCheckbox = document.getElementById('selfPickup');
+  let paymentMethodCash = document.getElementById('cash');
+  let paymentMethodCredit = document.getElementById('credit');
+  let firstName = document.getElementById('firstName');
+  let phone = document.getElementById('phone');
+  let address = document.getElementById('address');
+  let email = document.getElementById('email');
+  let pay = document.getElementById('pay');
+  let hr = document.getElementById('hr');
+  let isUserDetailsEntered = firstName.value.trim() !== '' &&
     phone.value.trim() !== '' &&
     address.value.trim() !== '' &&
     email.value.trim() !== '';
@@ -487,15 +490,15 @@ function togglePaymentOptionsVisibility() {
   }
 }
 
-var inputFields = document.querySelectorAll('#firstName, #phone, #address, #email');
+let inputFields = document.querySelectorAll('#firstName, #phone, #address, #email');
 inputFields.forEach(function (inputField) {
   inputField.addEventListener('input', togglePaymentOptionsVisibility);
 });
 togglePaymentOptionsVisibility();
 
 document.getElementById('toggle-cvv').addEventListener('click', function () {
-  var cvvInput = document.getElementById('cc-cvv');
-  var cvvIcon = document.getElementById('cvv-icon');
+  let cvvInput = document.getElementById('cc-cvv');
+  let cvvIcon = document.getElementById('cvv-icon');
 
   if (cvvInput.type === 'password') {
       cvvInput.type = 'text';

@@ -32,7 +32,6 @@ togglePasswordButton.addEventListener('click', function () {
 
   const type = isPasswordVisible ? 'text' : 'password';
   passwordInput.setAttribute('type', type);
-
   const iconSrc = isPasswordVisible ? unlockIcon : lockIcon;
   togglePasswordButton.innerHTML = `<img src="${iconSrc}" alt="Toggle Password">`;
 });

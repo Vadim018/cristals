@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
     const clearCartButton = document.getElementById("clear-cart-button");
-    const checkoutButton = document.getElementById("checkout-button");
     let deletedProduct = null;
 
     function updateCartContent() {
@@ -31,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <h4>${item.name}</h4>
                         <p>Price: ${item.price} ₴</p>
                         <p>Q-ty: ${item.quantity}</p>
-                        <a class="remove-item-button px-4 py-auto text-decoration-none">Remove х1</a>
+                        <a class="remove-item-button px-4 py-auto text-decoration-none">Remove x1</a>
                         <a class="remove-item-button remove-all-items-button px-4 py-auto text-decoration-none">Remove All</a>
                         <hr>
                     </div>`;
@@ -75,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
             checkoutButton.href = `checkout.html`;
         } else {
             const emptyCartMessage = document.createElement("div");
-            emptyCartMessage.textContent = "Cart is empty";
+            emptyCartMessage.textContent = "THE CART IS EMPTY";
             emptyCartMessage.style.display = "flex";
             emptyCartMessage.style.justifyContent = "center";
             emptyCartMessage.style.alignItems = "center";
@@ -108,16 +107,16 @@ document.addEventListener("DOMContentLoaded", function () {
 setTimeout(function () {
     document.getElementById("loading-screen").style.opacity = 0;
     setTimeout(function () {
-      document.getElementById("loading-screen").style.display = "none";
+        document.getElementById("loading-screen").style.display = "none";
     }, 500);
-  }, 0);
+}, 0);
 
 document.addEventListener("click", function (event) {
-  if (event.target.tagName === "A") {
-    event.preventDefault();
-    document.getElementById("loading-screen").classList.add("fade-out");
-    setTimeout(function () {
-      window.location.href = event.target.href;
-    }, 0);
-  }
+    if (event.target.tagName === "A") {
+        event.preventDefault();
+        document.getElementById("loading-screen").classList.add("fade-out");
+        setTimeout(function () {
+            window.location.href = event.target.href;
+        }, 0);
+    }
 });

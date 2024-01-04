@@ -12,7 +12,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: #FFF;
   z-index: 99999;
   display: flex;
   justify-content: center;
@@ -33,7 +33,7 @@ body,
 .dark-background #cart-item-count, 
 .dark-background .radio,
 #clock {
-  color: #fff;
+  color: #FFF;
 }
 
 body, #cart-item-count {
@@ -225,7 +225,7 @@ h3, p, .product-card p, .quantity-button, #cart-item-count {
 }
 
 .dark-background .quantity-button {
-  border: 2px solid #fff;
+  border: 2px solid #FFF;
 }
 
 .dark-background .product-card {
@@ -252,7 +252,7 @@ h3, p, .product-card p, .quantity-button, #cart-item-count {
 }
 
 .product-line {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #CCC;
   margin: 10px 0;
 }
 
@@ -346,7 +346,7 @@ h3, p, .product-card p, .quantity-button, #cart-item-count {
   outline: none;
   box-shadow: none;
   border: none;
-  color: #fff;
+  color: #FFF;
   padding: 0;
 }
 
@@ -418,7 +418,7 @@ h3, p, .product-card p, .quantity-button, #cart-item-count {
     border-radius: 5px;
     font-size: 18px;
     font-weight: bold;
-    background-color: #fff;
+    background-color: #FFF;
     padding: 15px;
     border-radius: 50%;
     width: 20px;
@@ -434,7 +434,7 @@ h3, p, .product-card p, .quantity-button, #cart-item-count {
 
   .dark-background #cart-item-count {
     background-color: #000;
-    color: #fff;
+    color: #FFF;
   }
 
   #clock, #cart-icon {

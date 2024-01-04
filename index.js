@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const currentTime = timestamp - startTime;
       const scrollProgress = Math.min(currentTime / scrollDuration, 1);
       const easeInOutProgress = easeInOutQuad(scrollProgress);
+      
       window.scrollTo(0, startScrollTop * (1 - easeInOutProgress));
       if (currentTime < scrollDuration) {
         requestAnimationFrame(scrollStep);

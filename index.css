@@ -8,7 +8,7 @@ body {
 }
 
 #loading-screen {
-    background-color: #fff;
+    background-color: #FFF;
     z-index: 99999;
     transition: opacity 0.5s ease-in-out;
 }
@@ -26,7 +26,7 @@ body, #backToTopBtn {
 }
 
 body, .btn-group-menu:hover, .category-name, .new-icon, .btn-group-menu, #backToTopBtn {
-    color: #fff;
+    color: #FFF;
 }
 
 ul {
@@ -156,7 +156,7 @@ button.navbar-toggler-icon, #backToTopBtn {
     left: 50%;
     width: 0;
     height: 3px;
-    background: #fff;
+    background: #FFF;
     transition: width 0.3s ease, left 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
     transform: translateX(-50%, 50%);
     opacity: 0;
@@ -291,7 +291,7 @@ button.navbar-toggler-icon, #backToTopBtn {
 }
 
 .dark-background .copyright {
-    color: #fff;
+    color: #FFF;
 }
 
 @keyframes pulse {

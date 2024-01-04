@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const productRow = document.getElementById("productRow");
     const emptyCategoryMessage = document.getElementById("emptyCategoryMessage");
     const categoryButtons = document.querySelectorAll(".category a");
+
     categoryButtons.forEach(function (button) {
         const category = button.getAttribute("data-category");
         if (category) {
@@ -58,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
             { name: "Big Chicken", description: "burger, 300ml, french fries, 1 sauce", price: 180, image: "img/burger3.jpg" },
             { name: "Cheeseburger", description: "burger, 300ml, french fries, 1 sauce", price: 150, image: "img/burger4.jpg" },
             { name: "Royal Deluxe", description: "burger", price: 135, image: "img/burger5.jpg" },
-            { name: "Chickenburger", description: "burger + sticks", price: 120, image: "img/burger6.jpg" },
+            { name: "Chickenburger", description: "burger, sticks", price: 120, image: "img/burger6.jpg" },
             { name: "Chicken Mac", description: "burger", price: 100, image: "img/burger7.jpg" },
             { name: "Royal", description: "burger", price: 100, image: "img/burger8.jpg" },
             { name: "Chicken Bacon", description: "burger", price: 75, image: "img/burger9.jpg" }
@@ -194,14 +195,11 @@ document.addEventListener("DOMContentLoaded", function () {
             productCard.innerHTML = `
             ${product.id === 1 ? '<span class="pepper" title="Spicy"><img src="https://cdn-icons-png.flaticon.com/128/3813/3813064.png?uid=R77081381&ga=GA1.1.1848467976.1701626084&semt=ais"></span>' : ''}
             ${product.id === 2 ? '<span class="vegan" title="Vegan"><img src="https://cdn-icons-png.flaticon.com/128/258/258566.png?uid=R77081381&ga=GA1.1.1848467976.1701626084&semt=ais"></span>' : ''}
-
                 <div class="product-card col-md-12">
                     <img src="${product.image}" alt="${product.name}" class="product-image img-fluid">
                     <h3>${product.name}</h3>
                     <hr class="product-line">
-                    <p>
-                        <span class="product-price">${product.price} ₴</span>
-                    </p>
+                    <p><span class="product-price">${product.price} ₴</span></p>
                     <div class="quantity-control">
                         <button class="quantity-button decrease">-</button>
                         <input type="num" inputmode="numeric" value="1" class="quantity-input">
@@ -210,7 +208,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     <br>
                     <button class="btn btn-warning add-to-cart-button">Buy item</button>
                 </div>`;
-    
             const productImage = productCard.querySelector(".product-image");
             productImage.addEventListener("click", () => {
                 openProductPage(product);
