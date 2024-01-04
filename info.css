@@ -403,6 +403,7 @@ body,
 
 .show-details img {
     width: 30px;
+    cursor: pointer;
 }
 
 .no-scroll {
