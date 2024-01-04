@@ -218,4 +218,8 @@ hr {
     .avatar:hover {
         transform: scale(1);
     }
+
+    .login-button a:hover {
+        background-color: transparent;
+    }
 }

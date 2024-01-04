@@ -98,7 +98,7 @@ input {
     position: absolute;
     top: 50%;
     right: 10px;
-    transform: translateY(-90%);
+    transform: translateY(-85%);
     cursor: pointer;
 }
 
@@ -146,6 +146,10 @@ input {
     border: 1px solid black;
 }
 
+.password-input-container span {
+    font-size: 20px;
+}
+
 @media screen and (max-width: 720px) {
     .regis {
         width: 95%;
@@ -159,5 +163,10 @@ input {
 
     h1 {
         font-size: 24px;
+    }
+
+    .btn-b:hover {
+        background-color: transparent;
+        color: #333;
     }
 }
