@@ -518,3 +518,28 @@ function toggleRadio(button) {
         lastChecked = button;
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  if (isCartEmpty()) {
+      hideElements();
+      displayFormUnavailableMessage();
+  }
+});
+
+function isCartEmpty() {
+  return document.getElementById('selected-products-list').children.length === 0;
+}
+
+function hideElements() {
+  document.getElementById('selected-products-list').style.display = 'none';
+  document.getElementById('commentsSection').style.display = 'none';
+  document.querySelector('.header-container').style.display = 'none';
+  document.getElementById('orderForm').style.display = 'none';
+}
+
+function displayFormUnavailableMessage() {
+  var formUnavailableMessage = document.createElement('div');
+  formUnavailableMessage.id = 'formUnavailableMessage';
+  formUnavailableMessage.innerHTML = '<p style="height: 100vh; display: flex; justify-content: center; align-items: center; margin: auto; text-align: center; font-size: 24px;">THE FORM IS INVALID NOW</p>';
+  document.body.appendChild(formUnavailableMessage);
+}

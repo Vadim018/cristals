@@ -3,13 +3,11 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background: radial-gradient(circle, #000000 0%, #24004D 20%, #00003B 40%, #00002C 80%);
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url("img/back1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
     z-index: -1;
 }
 
@@ -60,10 +58,7 @@ body {
     width: 450px;
     margin: 50px auto;
     padding: 20px;
-    border-top: 8px solid #151515;
-    border-left: 8px solid #151515;
-    border-bottom: 8px solid #00493E;
-    border-right: 8px solid #00493E;
+    border: none;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
 }
